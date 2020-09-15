@@ -22,7 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da894b19-437c-452f-bfa7-44b2ec0fb1c2" name="Default Changelist" comment="" />
+    <list default="true" id="da894b19-437c-452f-bfa7-44b2ec0fb1c2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.VCSBasics/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VCSBasics/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,6 +45,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/VCSBasics/Program.cs" />
+        <option value="$USER_HOME$/Desktop/GOLDENCROSS.mex" />
       </list>
     </option>
   </component>
@@ -86,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600169825690</updated>
       <workItem from="1600169829428" duration="5027000" />
-      <workItem from="1600198539020" duration="305000" />
+      <workItem from="1600198539020" duration="1006000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1600176735803</created>

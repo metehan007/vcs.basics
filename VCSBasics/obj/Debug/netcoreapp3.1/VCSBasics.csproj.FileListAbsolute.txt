@@ -1,0 +1,13 @@
+C:\Users\user\Documents\GitHub\vcs.basics\VCSBasics\bin\Debug\netcoreapp3.1\VCSBasics.exe
+C:\Users\user\Documents\GitHub\vcs.basics\VCSBasics\bin\Debug\netcoreapp3.1\VCSBasics.deps.json
+C:\Users\user\Documents\GitHub\vcs.basics\VCSBasics\bin\Debug\netcoreapp3.1\VCSBasics.runtimeconfig.json
+C:\Users\user\Documents\GitHub\vcs.basics\VCSBasics\bin\Debug\netcoreapp3.1\VCSBasics.runtimeconfig.dev.json
+C:\Users\user\Documents\GitHub\vcs.basics\VCSBasics\bin\Debug\netcoreapp3.1\VCSBasics.dll
+C:\Users\user\Documents\GitHub\vcs.basics\VCSBasics\bin\Debug\netcoreapp3.1\VCSBasics.pdb
+C:\Users\user\Documents\GitHub\vcs.basics\VCSBasics\obj\Debug\netcoreapp3.1\VCSBasics.csprojAssemblyReference.cache
+C:\Users\user\Documents\GitHub\vcs.basics\VCSBasics\obj\Debug\netcoreapp3.1\VCSBasics.AssemblyInfoInputs.cache
+C:\Users\user\Documents\GitHub\vcs.basics\VCSBasics\obj\Debug\netcoreapp3.1\VCSBasics.AssemblyInfo.cs
+C:\Users\user\Documents\GitHub\vcs.basics\VCSBasics\obj\Debug\netcoreapp3.1\VCSBasics.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\GitHub\vcs.basics\VCSBasics\obj\Debug\netcoreapp3.1\VCSBasics.dll
+C:\Users\user\Documents\GitHub\vcs.basics\VCSBasics\obj\Debug\netcoreapp3.1\VCSBasics.pdb
+C:\Users\user\Documents\GitHub\vcs.basics\VCSBasics\obj\Debug\netcoreapp3.1\VCSBasics.genruntimeconfig.cache
