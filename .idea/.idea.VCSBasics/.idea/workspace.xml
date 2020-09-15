@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da894b19-437c-452f-bfa7-44b2ec0fb1c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.VCSBasics/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.VCSBasics/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.VCSBasics/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.VCSBasics/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.VCSBasics/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.VCSBasics/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.VCSBasics/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.VCSBasics/riderModule.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VCSBasics.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VCSBasics/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VCSBasics/VCSBasics.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.VCSBasics/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VCSBasics/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +22,14 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/VCSBasics/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/user/AppData/Roaming/JetBrains/Rider2020.2/resharper-host/RiderTutorials/Tutorials/T10/VCSBasics/Program.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/VCSBasics/Program.cs" />
+      </list>
+    </option>
   </component>
   <component name="ProjectId" id="1hXub1O2C99X9J2JXBZ8VYf8FkF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -72,8 +70,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600169825690</updated>
-      <workItem from="1600169829428" duration="2905000" />
+      <workItem from="1600169829428" duration="3796000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1600176735803</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600176735804</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,5 +91,11 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Initial commit" />
     <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="512" y="236" key="#Notifications" timestamp="1600176772597">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="512" y="236" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1600176772597" />
   </component>
 </project>
