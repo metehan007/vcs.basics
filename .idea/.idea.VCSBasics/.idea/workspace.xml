@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da894b19-437c-452f-bfa7-44b2ec0fb1c2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.VCSBasics/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VCSBasics/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.VCSBasics/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VCSBasics/riderModule.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +22,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/VCSBasics/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/user/AppData/Roaming/JetBrains/Rider2020.2/resharper-host/RiderTutorials/Tutorials/T10/VCSBasics/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/user/AppData/Roaming/JetBrains/Rider2020.2/resharper-host/RiderTutorials/Tutorials/T10/VCSBasics/Program.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -70,7 +71,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600169825690</updated>
-      <workItem from="1600169829428" duration="3796000" />
+      <workItem from="1600169829428" duration="4154000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1600176735803</created>
@@ -79,7 +80,21 @@
       <option name="project" value="LOCAL" />
       <updated>1600176735804</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initial commit">
+      <created>1600177632321</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1600177632321</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Change message">
+      <created>1600177764822</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1600177764822</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -90,7 +105,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Change message" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change message" />
   </component>
   <component name="WindowStateProjectService">
     <state x="512" y="236" key="#Notifications" timestamp="1600176772597">
