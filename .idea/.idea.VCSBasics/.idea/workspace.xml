@@ -22,9 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da894b19-437c-452f-bfa7-44b2ec0fb1c2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.VCSBasics/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VCSBasics/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="da894b19-437c-452f-bfa7-44b2ec0fb1c2" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +44,7 @@
       <list>
         <option value="$PROJECT_DIR$/VCSBasics/Program.cs" />
         <option value="$USER_HOME$/Desktop/GOLDENCROSS.mex" />
+        <option value="$PROJECT_DIR$/.git/info/exclude" />
       </list>
     </option>
   </component>
@@ -90,6 +89,7 @@
       <updated>1600169825690</updated>
       <workItem from="1600169829428" duration="5027000" />
       <workItem from="1600198539020" duration="1006000" />
+      <workItem from="1600205937593" duration="646000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1600176735803</created>
@@ -126,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600198572265</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Iinitial commit">
+      <created>1600205976016</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1600205976016</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,12 +151,14 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Change message" />
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Iinitial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Iinitial commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="512" y="236" key="#Notifications" timestamp="1600176772597">
