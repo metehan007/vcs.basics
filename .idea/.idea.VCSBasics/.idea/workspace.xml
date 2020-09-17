@@ -90,7 +90,7 @@
       <workItem from="1600169829428" duration="5027000" />
       <workItem from="1600198539020" duration="1006000" />
       <workItem from="1600205937593" duration="646000" />
-      <workItem from="1600315983224" duration="295000" />
+      <workItem from="1600315983224" duration="946000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1600176735803</created>
@@ -134,7 +134,21 @@
       <option name="project" value="LOCAL" />
       <updated>1600205976016</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Inıtıal commit">
+      <created>1600316337712</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1600316337712</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Inıtıal commit">
+      <created>1600316515679</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1600316515679</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,7 +173,8 @@
     <MESSAGE value="Change message" />
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Iinitial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Iinitial commit" />
+    <MESSAGE value="Inıtıal commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inıtıal commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="512" y="236" key="#Notifications" timestamp="1600176772597">
