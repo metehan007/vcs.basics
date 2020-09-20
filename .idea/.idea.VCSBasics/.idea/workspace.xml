@@ -22,15 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da894b19-437c-452f-bfa7-44b2ec0fb1c2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.VCSBasics/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VCSBasics/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VCSBasics/obj/Debug/netcoreapp3.1/VCSBasics.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/VCSBasics/obj/Debug/netcoreapp3.1/VCSBasics.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VCSBasics/obj/VCSBasics.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/VCSBasics/obj/VCSBasics.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VCSBasics/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/VCSBasics/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VCSBasics/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/VCSBasics/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VCSBasics/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/VCSBasics/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VCSBasics/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/VCSBasics/obj/rider.project.restore.info" afterDir="false" />
-    </list>
+    <list default="true" id="da894b19-437c-452f-bfa7-44b2ec0fb1c2" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,7 +94,7 @@
       <workItem from="1600205937593" duration="646000" />
       <workItem from="1600315983224" duration="2287000" />
       <workItem from="1600320656816" duration="100000" />
-      <workItem from="1600448368778" duration="520000" />
+      <workItem from="1600448368778" duration="638000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1600176735803</created>
@@ -181,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600317992945</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="INITIAL COMMİT">
+      <created>1600448918821</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1600448918821</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,13 +206,18 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Iinitial commit" />
     <MESSAGE value="Inıtıal commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inıtıal commit" />
+    <MESSAGE value="INITIAL COMMİT" />
+    <option name="LAST_COMMIT_MESSAGE" value="INITIAL COMMİT" />
   </component>
   <component name="WindowStateProjectService">
     <state x="512" y="236" key="#Notifications" timestamp="1600176772597">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="512" y="236" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1600176772597" />
+    <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1600448882338">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1600448882338" />
     <state x="208" y="6" key="CommitChangelistDialog2" timestamp="1600178743289">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -222,22 +226,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1600180524527" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1600320756059">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1600449011574">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600320756059" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1600320756059">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600449011574" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1600449011574">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600320756059" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1600320756059">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600449011574" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1600449011573">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600320756059" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1600320756059">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600449011573" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1600449011574">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600320756059" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600449011574" />
     <state width="1493" height="288" key="GridCell.Tab.1.bottom" timestamp="1600317669137">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
