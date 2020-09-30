@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.dotCover.DataAccess</name>
+    </assembly>
+    <members>
+        <member name="T:JetBrains.dotCover.DataAccess.SnapshotCore.Dal.LifetimedCache`2">
+            <summary>
+            Keeps value until any of its lifetimes is alive.
+            </summary>
+            <typeparam name="TKey">keys type</typeparam>
+            <typeparam name="TValue">values type</typeparam>
+        </member>
+        <member name="M:JetBrains.dotCover.DataAccess.SnapshotCore.Dal.LifetimedCache`2.GetOrCreateValue(`0,JetBrains.Lifetimes.Lifetime,`1@,System.Func{`0,JetBrains.Lifetimes.Lifetime,`1})">
+            <summary>
+            Trying to get value from cache. If nothing found, creates a new value.  
+            </summary>
+            <param name="key">key in cache</param>
+            <param name="lifetime">value lifetime</param>
+            <param name="value">obtained or created value</param>
+            <param name="create">value constructor</param>
+            <returns>true if value was created, false - value was in cache already</returns>
+        </member>
+        <member name="M:JetBrains.dotCover.DataAccess.SnapshotCore.Dal.LifetimedCache`2.TryGetValue(`0,JetBrains.Lifetimes.Lifetime,`1@)">
+            <summary>
+            Trying to get value from cache.
+            </summary>
+            <param name="key">key in cache</param>
+            <param name="lifetime">value lifetime</param>
+            <param name="value">obtained value</param>
+            <returns>true if value was found in cache</returns>
+        </member>
+        <member name="M:JetBrains.dotCover.DataAccess.SnapshotCore.Dal.ConvolutionUtil.Convolve``1(System.Collections.Generic.IEnumerable{``0},System.Int32,JetBrains.Application.Progress.IProgressIndicator,JetBrains.dotCover.DataAccess.SnapshotCore.Dal.ConvolutionUtil.Func{System.Collections.Generic.IEnumerable{``0},System.Int32,System.Int32,System.Boolean,JetBrains.Application.Progress.IProgressIndicator,``0})">
+            <summary>
+            Performs convolution
+            </summary>
+            <typeparam name="T">item type</typeparam>
+            <param name="source">source collection</param>
+            <param name="maxItemsNumber">max number of items to be processed simultaneously</param>
+            <param name="progress">progress indicator</param>
+            <param name="func">convolution function: (itemsToConvolve, firstItemIndex, lastItemIndex, isLastStep, progress) => convolvedItem</param>
+            <returns>resulting item</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,533 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.dotCover.ClientCore</name>
+    </assembly>
+    <members>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.DotCoverWorkspaceModel">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:7</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.AddDataFromAssembliesArg">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:522</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.AddDataFromRawSnapshotsArg">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:513</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.ApplyFiltersArg">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:530</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.CheckTestsCoverageDataStatusArg">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:578</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.FilterFunctionsArg">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:298</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.FireSignalArg">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:251</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.OpenOrCreateCumulativeSnapshotArg">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:621</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.OpenRawSnapshotArg">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:614</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.ProcessSnapshotsArg">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:562</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdAssemblyData">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:291</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdAttributeFilter">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:161</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdAttributeFilterSet">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:166</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdAutoPropertiesFilterConfigurator">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:175</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdCoverageDetails">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:9</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdCoverageDetailsProvider">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:15</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdCoverageFilter">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:147</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdCoverageFilterSet">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:155</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdCoverageFiltersFactory">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:203</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdCoverageNodeInfo">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:23</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdCoverageNodesSourceCodeInfoProvider">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:497</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdCoverageTreePath">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:180</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdCoverageTreeQuickSearchService">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:53</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdCoverageTreeReverseCoverageProvider">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:58</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdCoverageTreeStructureProvider">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:33</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdCumulativeSnapshotUpdater">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:511</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdDetailedXmlReportBuilder">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:369</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdDocumentArg">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:68</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdDocumentChecksum">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:96</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdDocumentContext">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:91</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdDocumentPdbStatementRanges">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:101</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdDocumentReverseCoverageProvider">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:141</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdDocumentStatementsCoverageProvider">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:127</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdDocumentsFilterConfigurator">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:170</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdEnvironmentSectionEntry">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:262</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdEnvironmentSectionExplorerModel">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:259</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdExtendedFunctionInfo">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:279</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdFunctionInfo">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:268</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdFunctionInfoExplorerModel">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:296</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdFunctionRangeData">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:274</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdHtmlReportBuilder">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:346</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdHtmlReportBuilderArg">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:348</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdJsonReportBuilder">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:373</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdManualNodesFilterConfigurator">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:185</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdMatchingNodeInfo">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:46</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdMethodCoverageInfo">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:122</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdModuleLoadInfo">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:310</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdModuleStatSectionExplorerModel">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:322</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdNDependReportBuilder">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:381</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdNamespaceGroupingConfigurator">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:209</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdNestedFunctionInfo">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:480</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdOutdatedTestsProvider">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:572</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdPathMappingRootConsumer">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:64</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdPdbRange">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:78</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdPdbStatementRange">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:85</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdPdbStatementRangesProvider">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:106</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdProgressInfo">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:238</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdProgressService">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:243</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdProjectNode">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:444</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdProjectOutputAssembly">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:438</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdQuickSearchResult">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:45</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdRawSnapshotGroupInfo">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:506</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdReportBuilderArg">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:359</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdRiskMetricsProvider">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:230</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdSignalTransmitter">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:249</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdSnapshotLocationProvider">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:390</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdSnapshotMergeType">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:405</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdSnapshotMerger">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:415</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdSnapshotMetadataMappingMode">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:410</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdSnapshotPersistenceMode">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:607</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdSnapshotSaver">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:394</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdSolutionBasedCoverageTreeBuilder">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:451</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdSolutionBasedCoverageTreeConfigurator">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:474</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdSolutionFolderNode">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:432</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdSourceCodeInfo">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:486</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdSourceCodeToCoverageTreeMapper">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:501</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdStatementId">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:73</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdStatementsCoverageInfo">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:116</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdStatementsCoverageInfoType">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:111</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdSummaryXmlReportBuilder">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:385</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdTeamCityReportBuilder">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:377</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdTestCoverageInfo">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:136</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdTestsCoverageDataStatus">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:582</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdTestsCoverageDataStatusChecker">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:576</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdTypeRiskMetricDetails">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:221</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdTypeRiskMetricInfo">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:215</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdUncoveredLinesReportBuilder">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:336</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdUncoveredLinesReportBuilderArg">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:338</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdUnitTestSessionTestId">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:131</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdUnitTestSessionsManager">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:560</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdUnitTestsCoverageTreeConfigurator">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:589</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdWebProxySettings">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:328</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdWorkspacePresentableNameManager">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:601</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdWorkspaceSnapshotManager">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:612</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RdXmlReportBuilder">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:365</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RebuildTreeArg">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:453</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RemoveElementsDataArg">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:544</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RemoveInvalidSessionsDataArg">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:551</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.RemoveSessionDataArg">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:538</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.SaveSnapshotArg">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:397</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.SetActiveElementsArg">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:593</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.SetExcludedAndIncludedPathsArg">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:196</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.SnapshotMergerArg">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:417</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.UpdateProjectNodeArg">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:465</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.Workspace.RdModel.Client.UpdateSolutionFolderNodeArg">
+            <summary>
+            <p>Generated from: DotCoverWorkspaceModel.kt:459</p>
+            </summary>
+        </member>
+    </members>
+</doc>

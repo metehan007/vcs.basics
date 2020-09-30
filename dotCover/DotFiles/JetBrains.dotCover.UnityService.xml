@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.dotCover.UnityService</name>
+    </assembly>
+    <members>
+        <member name="T:JetBrains.dotCover.UnityService.RdModel.Client.DotCoverUnityServiceModel">
+            <summary>
+            <p>Generated from: DotCoverUnityServiceModel.kt:10</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.UnityService.RdModel.Client.AlertEventArgs">
+            <summary>
+            <p>Generated from: DotCoverUnityServiceModel.kt:16</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.UnityService.RdModel.Client.AlertEventSeverity">
+            <summary>
+            <p>Generated from: DotCoverUnityServiceModel.kt:11</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.UnityService.RdModel.Host.DotCoverUnityServiceModel">
+            <summary>
+            <p>Generated from: DotCoverUnityServiceModel.kt:10</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.UnityService.RdModel.Host.AlertEventArgs">
+            <summary>
+            <p>Generated from: DotCoverUnityServiceModel.kt:16</p>
+            </summary>
+        </member>
+        <member name="T:JetBrains.dotCover.UnityService.RdModel.Host.AlertEventSeverity">
+            <summary>
+            <p>Generated from: DotCoverUnityServiceModel.kt:11</p>
+            </summary>
+        </member>
+    </members>
+</doc>
