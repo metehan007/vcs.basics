@@ -1,0 +1,16 @@
+<idea-plugin>
+  <extensions defaultExtensionNs="com.intellij.database">
+    <modelFacade dbms="MONGO" implementationClass="com.intellij.database.dialects.mongo.model.MongoModelFacade"/>
+    <jdbcHelper dbms="MONGO" implementationClass="com.intellij.database.remote.jdbc.helpers.MongoJdbcHelper"/>
+    <dmlGenerator dbms="MONGO" implementationClass="com.intellij.database.dialects.mongo.MongoDmlGenerator"/>
+    <gridHelper dbms="MONGO" implementationClass="com.intellij.database.dialects.mongo.MongoGridHelper"/>
+    <gridColumnsManagerFactory dbms="MONGO" implementationClass="com.intellij.database.dialects.mongo.MongoGridColumnsManagerFactory"/>
+    <driversConfig config="databaseDrivers/mongo-drivers.xml"/>
+    <databaseViewStructureProvider dbms="MONGO" implementationClass="com.intellij.database.dialects.mongo.MongoDatabaseViewStructureProvider" order="last"/>
+    <executionEnvironmentHelper dbms="MONGO" implementationClass="com.intellij.database.dialects.mongo.MongoExecutionEnvironmentHelper"/>
+    <domainRegistry dbms="MONGO" implementationClass="com.intellij.database.dialects.mongo.MongoDomains"/>
+    <scriptGenerator dbms="MONGO" implementationClass="com.intellij.database.dialects.mongo.generator.MongoScriptGenerator"/>
+    <predicatesHelper dbms="MONGO" implementationClass="com.intellij.database.dialects.mongo.MongoPredicatesHelper"/>
+    <namingService dbms="MONGO" implementationClass="com.intellij.database.dialects.mongo.generator.MongoNamingService$Provider"/>
+  </extensions>
+</idea-plugin>
