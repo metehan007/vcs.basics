@@ -1,0 +1,391 @@
+[Start8Skin]
+SkinName=Shadow
+SkinBlurb=Semi Transparent style start menu.
+SkinAuthor=Stardock
+ 
+
+ 
+[SearchField.Icon1]
+Image=search_icon.png
+[SearchField.Icon2]
+Image=search_cancel_normal.png
+[SearchField.Icon3]
+Image=search_cancel_hover.png
+[SearchField.Icon4]
+Image=search_cancel_pressed.png
+ 
+
+ 
+
+
+ 
+[LeftMenu.TreeMode]
+TextColour=0 0 0
+ MouseoverColour=0 0 0
+ PressedColour=0 0 0
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+
+ 
+ 
+[ShutdownButton]
+Image=shutdown_button_left.png
+ 
+
+ 
+[ShutdownButton.Expanded]
+Image=shutdown_button_left_expanded.png
+ 
+
+ 
+[ShutdownButton.ExpandedArrow]
+Image=shutdown_right_expanded.png
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+[MorePrograms.Arrow]
+Image=all_programs_arrow.png
+ FrameCount=6
+ PaintMargins=0 0 0 0
+ Tile=1
+ TreatAsGlyph=1
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+[ShutdownButton.Arrow]
+ 
+ 
+ 
+ 
+Image=shutdown_button_right.png
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+[RightMenu::L]
+Exists=1
+ Image=top_right_layer_01.png
+ FrameCount=1
+ PaintMargins=10 10 10 10
+ 
+ 
+ 
+ 
+[RightMenu.Expanded::L]
+Exists=1
+ Image=top_right_layer_01_expanded.png
+ FrameCount=1
+ PaintMargins=10 10 10 10
+ 
+ 
+ 
+ 
+[RightMenu.ExpandedSelection]
+Image=selection_right_expanded.png
+ FrameCount=2
+ PaintMargins=4 4 4 4
+ Tile=1
+ 
+[RightMenu.Selection]
+Image=selection_right.png
+ FrameCount=2
+ PaintMargins=4 4 4 4
+ Tile=1
+ 
+[LeftMenu.Selection]
+Image=selection_left.png
+ FrameCount=2
+ PaintMargins=4 4 4 4
+ Tile=1
+ 
+[LeftMenu.SelectionLeftSplit]
+Image=selection_left_split_left.png
+ FrameCount=2
+ PaintMargins=4 4 4 4
+ Tile=1
+ 
+[LeftMenu.SelectionRightSplit]
+Image=selection_left_split_right.png
+ FrameCount=2
+ PaintMargins=4 4 4 4
+ Tile=1
+ 
+ 
+ 
+ 
+[SearchMode::L]
+Exists=1
+ Image=search_top_layer_01.png
+ PaintMargins=10 10 10 10
+ 
+ 
+[LeftMenu::L]
+Exists=1
+ Image=top_left_layer_01.png
+ PaintMargins=10 10 10 10
+ 
+[LeftMenu.Expanded::L]
+Exists=1
+ Image=top_left_layer_01.png
+ PaintMargins=10 10 10 10
+[SearchMode.Bottom::L]
+Exists=1
+ Image=search_bottom_layer_01.png
+ PaintMargins=10 10 10 10
+ 
+ 
+[MorePrograms.Background::L]
+Exists=1
+ Image=all_programs_layer_01.png
+ PaintMargins=10 10 10 10
+ 
+[MorePrograms.Mouseover]
+Image=selection_all_programs.png
+ FrameCount=3
+ PaintMargins=4 4 4 4
+ ContentMargins
+ 
+ 
+ 
+[BottomMenu.Left::L]
+Exists=1
+ Image=bottom_left_layer_01.png
+ PaintMargins=10 10 10 10
+ 
+ 
+[BottomMenu.LeftExpanded]
+Image=bottom_left.png
+ PaintMargins=10 10 10 10
+ PartHeight=42
+ ContentMargins=9 9 0 5
+ UserColourLayer=1
+ 
+ 
+[BottomMenu.Right::L]
+Exists=1
+ Image=bottom_right_layer_01.png
+ PaintMargins=10 10 10 10
+ 
+[BottomMenu.RightExpanded::L]
+Exists=1
+ Image=bottom_right_layer_01_expanded.png
+ PaintMargins=10 10 10 10
+ 
+[BottomMenu.LeftExpanded::L]
+Exists=1
+ Image=bottom_left_layer_01.png
+ PaintMargins=2 2 2 2
+ 
+ 
+ 
+ 
+ 
+ 
+[SearchField]
+Image=search_box.png
+ PaintMargins=4 4 4 4
+ FrameCount=4
+ 
+[ShutdownButton.Arrow::L]
+Exists=1
+ Image=shutdown_button_right_glyph.png
+ FrameCount=3
+ TreatAsGlyph=1
+ 
+[ShutdownButton.ExpandedArrow::L]
+Exists=1
+ Image=shutdown_button_right_glyph_expanded.png
+ FrameCount=3
+ TreatAsGlyph=1
+ 
+ 
+ 
+ 
+ 
+[BottomMenu.Left]
+Image=bottom_left.png
+ PaintMargins=10 10 10 10
+ PartHeight=42
+ ContentMargins=13 5 3 5
+ UserColourLayer=1
+ 
+[BottomMenu.Right]
+Image=bottom_right.png
+ PaintMargins=10 10 10 10
+ ContentMargins=11 5
+ PartHeight=42
+ UserColourLayer=1
+ 
+[BottomMenu.RightExpanded]
+Image=bottom_right.png
+ PaintMargins=10 10 10 10
+ ContentMargins=11 5
+ PartHeight=42
+ UserColourLayer=1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+[LeftMenu.Line]
+Image=separator_left.png
+ PaintMargins=0 1 0 0
+ Tile=0
+ 
+ 
+ 
+[RightMenu.Line]
+Image=separator_right.png
+ PaintMargins=20 1 20 0
+ Tile=1
+ 
+[SearchMode]
+Image=search_top.png
+ PaintMargins=10 10 10 10
+ PartWidth=411
+ PartHeight=94
+ ContentMargins=9 9 9 9
+ Tile=1
+ TextColour=0 0 0
+ MouseoverColour=0 0 0
+ PressedColour=0 0 0
+ UserColourLayer=1
+ 
+[SearchMode.Bottom]
+Image=search_bottom.png
+ PaintMargins=10 10 10 10
+ PartWidth=411
+ PartHeight=30
+ ContentMargins=9 9 9 9
+ Tile=1
+ TextColour=0 0 0
+ MouseoverColour=0 0 0
+ PressedColour=0 0 0
+ UserColourLayer=1
+ 
+[MorePrograms.Background]
+Image=all_programs.png
+ PaintMargins=10 10 10 10
+ PartHeight=30
+ ContentMargins=9 0 0 0
+ Tile=1
+ TextColour=0 0 0
+ UserColourLayer=1
+ 
+ 
+ 
+[UserPicture]
+Image=user_picture.png
+ PaintMargins=5 5 5 5
+ TreatAsGlyph=1
+ UserColourLayer=1
+[LeftMenu]
+Image=top_left.png
+ PaintMargins=10 10 10 10
+ PartWidth=251
+ PartHeight=124
+ ContentMargins=8 10 -2 5
+ TextColour=0 0 0
+ MouseoverColour=0 0 0
+ PressedColour=0 0 0
+ UserColourLayer=1
+ 
+[LeftMenu.Expanded]
+Image=top_left.png
+ PaintMargins=10 10 10 10
+ PartWidth=251
+ PartHeight=124
+ ContentMargins=8 10 2 5
+ TextColour=0 0 0
+ MouseoverColour=0 0 0
+ PressedColour=0 0 0
+ UserColourLayer=1
+ 
+ 
+ 
+[RightMenu.Expanded]
+Image=top_right.png
+ PaintMargins=10 10 10 10
+ PartWidth=220
+ PartHeight=154
+ ContentMargins=1 7 6 1
+ Tile=1
+ TextColour=0 0 0 0
+ MouseoverColour=0 0 0 0
+ PressedColour=0 0 0 0
+ UserColourLayer=1
+ 
+[Transparency]
+Left=0
+Right=0
+Top=-1
+ 
+[UserPicture::L]
+Exists=1
+ Image=user_picture_layer_01.png
+ PaintMargins=5 5 5 5
+ TreatAsGlyph=1
+ 
+[RightMenu]
+Image=top_right.png
+ PaintMargins=10 10 10 10
+ PartWidth=160
+ PartHeight=154
+ ContentMargins=8 1 1 5
+ Tile=1
+ TextColour=255 255 255
+ MouseoverColour=255 255 255
+ PressedColour=255 255 255
+ UserColourLayer=1
+ 
