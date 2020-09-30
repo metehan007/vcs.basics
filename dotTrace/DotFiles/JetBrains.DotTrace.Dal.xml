@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.DotTrace.Dal</name>
+    </assembly>
+    <members>
+        <member name="M:JetBrains.DotTrace.Dal.Performance.SectionReaders.CalltreeSectionAsStreamReader.ReadNodesReverseCore(JetBrains.Util.Storage.IInMemoryStream,System.Byte*,System.Int32,JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionOffset,JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeSectionOffset,System.Int32,JetBrains.DotTrace.Dal.Performance.SectionReaders.CalltreeSectionAsStreamReader.LowLevelReader,JetBrains.DotTrace.DalInterface.Performance.CallTree.CallTreeHeaderFull)">
+            <summary>
+            This method fills <see cref="!:bufferEnd"/> from end to start of given buffer (array)
+            </summary>
+            <param name="stream"></param>
+            <param name="bufferEnd">
+            Pointer to the end of dest buffer. The first element will be put at bufferEnd - (readCount*structSize)
+            The last element will be put at (bufferEnd-structSize)
+             </param>
+        </member>
+    </members>
+</doc>
