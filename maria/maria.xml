@@ -1,0 +1,27 @@
+<idea-plugin>
+  <extensions defaultExtensionNs="com.intellij.database">
+    <jdbcHelper dbms="MARIADB" implementationClass="com.intellij.database.remote.jdbc.helpers.MariaJdbcHelper"/>
+    <modelFacade dbms="MARIADB" implementationClass="com.intellij.database.dialects.maria.model.MariaModelFacade"/>
+    <introspector dbms="MARIADB" implementationClass="com.intellij.database.dialects.maria.introspector.MariaIntrospector$Factory"/>
+    <scriptGenerator dbms="MARIADB" implementationClass="com.intellij.database.dialects.maria.generator.MariaScriptGenerator"/>
+    <namingService dbms="MARIADB" implementationClass="com.intellij.database.dialects.mysqlbase.generator.MysqlBaseNamingService$Provider"/>
+    <definitionProvider dbms="MARIADB" implementationClass="com.intellij.database.dialects.mysqlbase.MysqlBaseDefinitionProvider"/>
+    <explainPlanProvider dbms="MARIADB" implementationClass="com.intellij.database.dialects.maria.plan.MariaExplainPlanProvider"/>
+    <sqlObjectBuilder dbms="MARIADB" implementationClass="com.intellij.database.dialects.maria.MariaObjectBuilder"/>
+    <domainRegistry dbms="MARIADB" implementationClass="com.intellij.database.dialects.mysqlbase.MysqlBaseDomains"/>
+    <dataImporter dbms="MARIADB" implementationClass="com.intellij.database.dialects.mysqlbase.MysqlBaseImportManager"/>
+    <executionEnvironmentHelper dbms="MARIADB" implementationClass="com.intellij.database.dialects.mysqlbase.MysqlBaseExecutionEnvironmentHelper"/>
+    <errorHandler dbms="MARIADB" implementationClass="com.intellij.database.dialects.mysqlbase.MysqlBaseErrorHandler"/>
+    <predicatesHelper dbms="MARIADB" implementationClass="com.intellij.database.dialects.mysqlbase.MysqlBasePredicatesHelper"/>
+    <gridHelper dbms="MARIADB" implementationClass="com.intellij.database.dialects.mysqlbase.MysqlbaseGridHelper"/>
+    <geoHelper dbms="MARIADB" implementationClass="com.intellij.database.dialects.mysqlbase.MysqlBaseGeoHelper"/>
+    <routineExecutionHelper dbms="MARIADB" implementationClass="com.intellij.database.dialects.generic.generator.GenericRoutineExecutionHelper"/>
+    <driversConfig config="databaseDrivers/maria-drivers.xml"/>
+  </extensions>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <registryKey key="database.introspection.mariadb.noGenExpr" defaultValue="true"
+                 description="Until 10.2.5 MariaDB missing information_schema.columns.generation_expression.
+                              But generation expression could be obtained by SHOW CREATE TABLE..., but that is slower."/>
+  </extensions>
+</idea-plugin>
