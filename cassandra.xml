@@ -1,0 +1,19 @@
+<idea-plugin>
+  <extensions defaultExtensionNs="com.intellij.database">
+    <modelFacade dbms="CASSANDRA" implementationClass="com.intellij.database.dialects.cassandra.model.CassModelFacade"/>
+    <introspector dbms="CASSANDRA" implementationClass="com.intellij.database.dialects.cassandra.introspector.CassIntrospector$Factory"/>
+    <jdbcHelper dbms="CASSANDRA" implementationClass="com.intellij.database.remote.jdbc.helpers.CassJdbcHelper"/>
+    <scriptGenerator dbms="CASSANDRA" implementationClass="com.intellij.database.dialects.cassandra.generator.CassScriptGenerator"/>
+    <namingService dbms="CASSANDRA" implementationClass="com.intellij.database.dialects.cassandra.generator.CassNamingService$Provider"/>
+    <sqlObjectBuilder dbms="CASSANDRA" implementationClass="com.intellij.database.dialects.cassandra.CassObjectBuilder"/>
+    <domainRegistry dbms="CASSANDRA" implementationClass="com.intellij.database.dialects.cassandra.Cass310Domains"/>
+    <domainRegistry dbms="CASSANDRA" implementationClass="com.intellij.database.dialects.cassandra.Cass22Domains"/>
+    <domainRegistry dbms="CASSANDRA" implementationClass="com.intellij.database.dialects.cassandra.Cass21Domains"/>
+    <predicatesHelper dbms="CASSANDRA" implementationClass="com.intellij.database.dialects.cassandra.CassPredicatesHelper"/>
+    <dataImporter dbms="CASSANDRA" implementationClass="com.intellij.database.dialects.cassandra.CassImportManager"/>
+    <executionEnvironmentHelper dbms="CASSANDRA" implementationClass="com.intellij.database.dialects.cassandra.CassExecutionEnvironmentHelper"/>
+    <errorHandler dbms="CASSANDRA" implementationClass="com.intellij.database.dialects.cassandra.CassErrorHandler"/>
+    <driversConfig config="databaseDrivers/cassandra-drivers.xml"/>
+    <dmlGenerator dbms="CASSANDRA" implementationClass="com.intellij.database.dialects.cassandra.CassDmlGenerator"/>
+  </extensions>
+</idea-plugin>
