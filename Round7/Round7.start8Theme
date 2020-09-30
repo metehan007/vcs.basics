@@ -1,0 +1,337 @@
+; Copyright 2013 Stardock Software, Inc, All Rights Reserved.
+
+[Start8Skin]
+SkinName = "Rounded Windows 7"
+SkinBlurb = "Inspired by Windows 7"
+
+[Transparency]
+Left = 8
+Right = 8
+Top = 8
+Bottom = 8
+
+[Texture1]
+Image = grad1.png
+AlphaMode = 117
+AlphaValue = 64
+PaintMargins = 0, 0, 0, 0
+Tile = 0
+
+; Our Start8 skin sections
+
+[LeftMenu::L]
+Image = topleftover.png
+PaintMargins = 13, 13, 2, 2
+AlphaMode = 20
+
+[LeftMenu::L::L]
+Image = newtopleftInner.png
+PaintMargins = 10, 10, 10, 2
+LayerMargins = 8, 8, 0, 0
+AlphaMode = 76
+
+
+
+
+[LeftMenu.Expanded]
+Image = TopLeft.png
+UserColourLayer = 1
+PaintMargins = 13, 13, 2, 2
+RenderAsGroup = 0
+TextureMode = 1
+
+[LeftMenu.Expanded::L]
+Image = topleftover.png
+PaintMargins = 13, 13, 2, 2
+AlphaMode = 20
+
+[LeftMenu.Expanded::L::L]
+Image = newtopleftInnerExpanded.png
+PaintMargins = 10, 10, 10, 2
+LayerMargins = 8, 8, 0, 0
+AlphaMode = 76
+
+
+
+
+
+[RightMenu::L]
+Image = toprightover.png
+PaintMargins = 2, 13, 13, 2
+AlphaMode = 20
+
+
+[RightMenu::L::L]
+Image = toprightInner.png
+PaintMargins = 5, 13, 0, 0
+AlphaMode = 76
+LayerMargins = 0, 8, 0, 0
+
+
+
+[RightMenu.Expanded::L]
+Image = toprightover.png
+PaintMargins = 2, 13, 13, 2
+AlphaMode = 20
+
+[RightMenu.Expanded::L::L]
+Image = toprightexpandedInner.png
+PaintMargins = 5, 13, 13, 0
+AlphaMode = 76
+
+[BottomMenu.Left]
+UserColourLayer = 1
+image = bottomLeft.png
+PaintMargins = 13, 2, 2, 15
+ContentMargins = 20, 11, 17, 19
+TextureMode = 1
+
+
+[BottomMenu.Left::L]
+image = bottomLeftOver.png
+PaintMargins = 13, 2, 2, 15
+AlphaMode = 20
+
+[BottomMenu.Left::L::L]
+image = bottomLeftInner.png
+AlphaMode = 76
+PaintMargins = 13, 3, 12, 15
+LayerMargins = 8, 0, 0, 8
+
+[BottomMenu.LeftExpanded]
+UserColourLayer = 1
+image = bottomLeft.png
+PaintMargins = 13, 2, 2, 15
+ContentMargins = 20, 11, 17, 19
+TextureMode = 1
+
+
+[BottomMenu.LeftExpanded::L]
+image = bottomLeftOver.png
+PaintMargins = 13, 2, 2, 15
+AlphaMode = 20
+
+[BottomMenu.LeftExpanded::L::L]
+image = bottomLeftInnerExpanded.png
+PaintMargins = 13, 3, 12, 15
+LayerMargins = 8, 0, 0, 8
+AlphaMode = 76
+
+[BottomMenu.Right]
+UserColourLayer = 1
+image = bottomright.png
+PaintMargins = 2, 2, 2, 15
+ContentMargins = 10, 11, 2, 19
+TextureMode = 1
+
+
+[BottomMenu.Right::L]
+image = bottomrightOver.png
+PaintMargins = 2, 2, 2, 15
+AlphaMode = 20
+
+[BottomMenu.Right::L::L]
+image = bottomRightInner.png
+PaintMargins = 10, 1, 1, 12
+LayerMargins = 0, 0, 0, 8
+AlphaMode = 76
+
+[BottomMenu.RightExpanded]
+UserColourLayer = 1
+image = bottomright.png
+PaintMargins = 2, 2, 2, 15
+ContentMargins = 10, 11, 2, 19
+TextureMode = 1
+
+
+[BottomMenu.RightExpanded::L]
+image = bottomrightOver.png
+PaintMargins = 2, 2, 2, 15
+AlphaMode = 20
+
+[BottomMenu.RightExpanded::L::L]
+image = bottomrightExpandedInner.png
+PaintMargins = 2, 2, 15, 15
+LayerMargins = 0, 0, 8, 8
+AlphaMode = 76
+
+
+
+[SearchMode]
+image = Search.png
+UserColourLayer = 1
+PaintMargins = 13, 13, 13, 0
+ContentMargins = 11, 13, 11, 0
+TextColour = 0, 0, 0
+TextureMode = 1
+
+
+[SearchMode::L]
+image = SearchOver.png
+PaintMargins = 13, 13, 13, 0
+AlphaMode = 20
+
+[SearchMode::L::L]
+image = topinner2.png
+PaintMargins = 13, 13, 13, 0
+AlphaMode = 76
+LayerMargins = 8, 8, 8, 0
+
+
+
+[MorePrograms.Background]
+image = paddleft.png
+UserColourLayer = 1
+PaintMargins = 13, 2, 2, 2
+ContentMargins = 12, 0, 2, 0
+PartHeight = 26
+TextureMode = 1
+
+
+[MorePrograms.Background::L]
+image = paddleftOver.png
+PaintMargins = 13, 2, 2, 2
+AlphaMode = 20
+
+[MorePrograms.Background::L::L]
+image = moreprogsinner.png
+PaintMargins = 13, 2, 2, 2
+LayerMargins = 8, 0, 0, 0
+AlphaMode = 76
+
+[LeftMenu.Line]
+image = leftSept.png
+PaintMargins = 11, 2, 11, 0
+
+[RightMenu.Line]
+image = rightsept.png
+PaintMargins = 15, 2, 15, 0
+AlphaMode = 20
+
+[MorePrograms.Arrow]
+image = blank.png
+PaintMargins = 0, 0, 0, 0
+RenderDefaultArrow = 1
+;ContentMargins = 2, 0, 42, 0
+
+
+
+
+
+[ShutdownButton]
+;image = t1.png
+FrameCount = 3
+PaintMargins = 2, 2, 2, 2
+TextColour = 255, 255, 255
+Image=shutdown_button_left.png
+
+[ShutdownButton.Arrow]
+;image = t1.png
+FrameCount = 3
+PaintMargins = 2, 2, 2, 2
+PartWidth = 
+PartHeight = 
+RenderDefaultArrow = 1
+Image=shutdown_button_right.png
+
+
+[SearchField]
+image = searchfield.png
+PaintMargins = 3, 3, 3, 3
+PartHeight = 24
+
+[SearchMode.Bottom]
+image = paddMiddle.png
+UserColourLayer = 1
+PaintMargins = 13, 0, 13, 0
+TextColour = 30, 50, 135
+TextureMode = 1
+
+
+[SearchMode.Bottom::L]
+image = paddMiddleOver.png
+PaintMargins = 13, 0, 13, 0
+AlphaMode = 20
+
+[SearchMode.Bottom::L::L]
+image = midinner2.png
+PaintMargins = 13, 0, 13, 0
+AlphaMode = 76
+LayerMargins = 8, 0, 8, 0
+
+; Frame - if defined it will override the Start8 default
+
+; Icons used by the search field, search, close norm, close mouse, close pressed
+[SearchField.Icon1]
+Image = 
+
+[SearchField.Icon2]
+Image = 
+
+[SearchField.Icon3]
+Image = 
+
+[SearchField.Icon4]
+Image =
+ 
+ 
+ 
+ 
+ 
+[LeftMenu]
+Image=TopLeft.png
+ UserColourLayer=1
+ PaintMargins=13, 13, 2, 2
+ ContentMargins=11, 12, 2, 0
+ RenderAsGroup=0
+ PartWidth=261
+ TextColour=0, 0, 0
+ TextureMode=1
+ 
+[ShutdownButton.Expanded]
+[RightMenu]
+UserColourLayer=1
+ image=topRight.png
+ PaintMargins=10 10 10 10
+ ContentMargins=7,0,7,5
+ PartWidth=150
+ NormalColour=227,239,255
+ MouseoverColour=227 239 255
+ TextureMode=1
+ 
+[LeftMenu.Selection]
+Image=selection_left.png
+ FrameCount=2
+ PaintMargins=4 4 4 4
+ 
+[LeftMenu.SelectionLeftSplit]
+Image=selection_left_split_left.png
+ FrameCount=2
+ PaintMargins=4 4 4 4
+[LeftMenu.SelectionRightSplit]
+Image=selection_left_split_right.png
+ FrameCount=2
+ PaintMargins=4 4 4 4
+[RightMenu.Expanded]
+UserColourLayer=1
+ image=topRight.png
+ PaintMargins=10 10 10 10
+ ContentMargins=11,13,13,0
+ TextColour=0,0,0
+ MouseoverColour=0,0,0
+ PartWidth=230
+ TextureMode=1
+ GroupColour = 35, 35, 185
+
+[MorePrograms.Mouseover]
+image=selection_all_programs.png
+ PaintMargins=10 10 10 10
+[RightMenu.Selection]
+Image=selection_right.png
+ FrameCount=2
+ PaintMargins=4, 4, 4, 4
+ 
+ 
+[UserPicture]
+Image=user_picture.png
+ TreatAsGlyph=1
