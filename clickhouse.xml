@@ -1,0 +1,16 @@
+<idea-plugin>
+  <extensions defaultExtensionNs="com.intellij.database">
+    <jdbcHelper dbms="CLICKHOUSE" implementationClass="com.intellij.database.remote.jdbc.helpers.CHouseJdbcHelper"/>
+    <modelFacade dbms="CLICKHOUSE" implementationClass="com.intellij.database.dialects.clickhouse.model.CHouseModelFacade"/>
+    <introspector dbms="CLICKHOUSE" implementationClass="com.intellij.database.dialects.clickhouse.introspector.CHouseIntrospector$Factory"/>
+    <scriptGenerator dbms="CLICKHOUSE" implementationClass="com.intellij.database.dialects.clickhouse.generator.CHouseScriptGenerator"/>
+    <namingService dbms="CLICKHOUSE" implementationClass="com.intellij.database.dialects.clickhouse.generator.CHouseNamingService$Provider"/>
+    <sqlObjectBuilder dbms="CLICKHOUSE" implementationClass="com.intellij.database.dialects.clickhouse.CHouseObjectBuilder"/>
+    <domainRegistry dbms="CLICKHOUSE" implementationClass="com.intellij.database.dialects.clickhouse.CHouseDomains"/>
+    <dataImporter dbms="CLICKHOUSE" implementationClass="com.intellij.database.dialects.clickhouse.CHouseImportManager"/>
+    <errorHandler dbms="CLICKHOUSE" implementationClass="com.intellij.database.dialects.clickhouse.CHouseErrorHandler"/>
+    <predicatesHelper dbms="CLICKHOUSE" implementationClass="com.intellij.database.dialects.clickhouse.CHousePredicatesHelper"/>
+    <driversConfig config="databaseDrivers/clickhouse-drivers.xml"/>
+    <dmlGenerator dbms="CLICKHOUSE" implementationClass="com.intellij.database.dialects.clickhouse.CHouseDmlGenerator"/>
+  </extensions>
+</idea-plugin>
