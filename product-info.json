@@ -1,0 +1,16 @@
+{
+  "name": "JetBrains Rider",
+  "version": "2020.2.3",
+  "buildNumber": "202.7319.2",
+  "productCode": "RD",
+  "dataDirectoryName": "Rider2020.2",
+  "svgIconPath": "bin/rider.svg",
+  "launch": [
+    {
+      "os": "Windows",
+      "launcherPath": "bin/rider64.exe",
+      "javaExecutablePath": "jbr/bin/java.exe",
+      "vmOptionsFilePath": "bin/rider64.exe.vmoptions"
+    }
+  ]
+}
