@@ -1,0 +1,18 @@
+<idea-plugin>
+  <extensions defaultExtensionNs="com.intellij.database">
+    <jdbcHelper dbms="DB2" implementationClass="com.intellij.database.remote.jdbc.helpers.Db2JdbcHelper"/>
+    <modelFacade dbms="DB2" implementationClass="com.intellij.database.dialects.db2.model.Db2ModelFacade"/>
+    <scriptGenerator dbms="DB2" implementationClass="com.intellij.database.dialects.db2.generator.Db2ScriptGenerator"/>
+    <namingService dbms="DB2" implementationClass="com.intellij.database.dialects.db2.generator.Db2NamingService$Provider"/>
+    <definitionProvider dbms="DB2" implementationClass="com.intellij.database.dialects.db2.Db2DefinitionProvider"/>
+    <explainPlanProvider dbms="DB2" implementationClass="com.intellij.database.dialects.db2.plan.Db2ExplainPlanProvider"/>
+    <sqlObjectBuilder dbms="DB2" implementationClass="com.intellij.database.dialects.db2.Db2BaseObjectBuilder"/>
+    <databaseViewStructureProvider dbms="DB2" implementationClass="com.intellij.database.dialects.db2.Db2DatabaseViewStructureProvider" order="last"/>
+    <domainRegistry dbms="DB2" implementationClass="com.intellij.database.dialects.db2.Db2Domains"/>
+    <dataImporter dbms="DB2" implementationClass="com.intellij.database.dialects.db2.Db2ImportManager"/>
+    <errorHandler dbms="DB2" implementationClass="com.intellij.database.dialects.db2.Db2ErrorHandler"/>
+    <geoHelper dbms="DB2" implementationClass="com.intellij.database.dialects.db2.Db2GeoHelper"/>
+    <dmlGenerator dbms="DB2" implementationClass="com.intellij.database.dialects.db2.Db2BaseDmlGenerator"/>
+    <driversConfig config="databaseDrivers/db2-drivers.xml"/>
+  </extensions>
+</idea-plugin>

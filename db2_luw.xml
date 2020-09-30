@@ -1,0 +1,19 @@
+<idea-plugin>
+  <extensions defaultExtensionNs="com.intellij.database">
+    <jdbcHelper dbms="DB2_LUW" implementationClass="com.intellij.database.remote.jdbc.helpers.Db2LuwJdbcHelper"/>
+    <modelFacade dbms="DB2_LUW" implementationClass="com.intellij.database.dialects.db2.model.Db2ModelFacade"/>
+    <introspector dbms="DB2_LUW" implementationClass="com.intellij.database.dialects.db2.introspector.Db2Introspector$Factory"/>
+    <scriptGenerator dbms="DB2_LUW" implementationClass="com.intellij.database.dialects.db2.generator.Db2ScriptGenerator"/>
+    <namingService dbms="DB2_LUW" implementationClass="com.intellij.database.dialects.db2.generator.Db2NamingService$Provider"/>
+    <definitionProvider dbms="DB2_LUW" implementationClass="com.intellij.database.dialects.db2.Db2DefinitionProvider"/>
+    <explainPlanProvider dbms="DB2_LUW" implementationClass="com.intellij.database.dialects.db2.plan.Db2ExplainPlanProvider"/>
+    <sqlObjectBuilder dbms="DB2_LUW" implementationClass="com.intellij.database.dialects.db2.Db2BaseObjectBuilder"/>
+    <databaseViewStructureProvider dbms="DB2_LUW" implementationClass="com.intellij.database.dialects.db2.Db2DatabaseViewStructureProvider" order="last"/>
+    <domainRegistry dbms="DB2_LUW" implementationClass="com.intellij.database.dialects.db2.Db2Domains"/>
+    <dataImporter dbms="DB2_LUW" implementationClass="com.intellij.database.dialects.db2.Db2ImportManager"/>
+    <errorHandler dbms="DB2_LUW" implementationClass="com.intellij.database.dialects.db2.Db2ErrorHandler"/>
+    <dmlGenerator dbms="DB2_LUW" implementationClass="com.intellij.database.dialects.db2.Db2BaseDmlGenerator"/>
+    <routineExecutionHelper dbms="DB2_LUW" implementationClass="com.intellij.database.dialects.db2.generator.Db2RoutineExecutionHelper"/>
+    <geoHelper dbms="DB2_LUW" implementationClass="com.intellij.database.dialects.db2.Db2GeoHelper"/>
+  </extensions>
+</idea-plugin>
