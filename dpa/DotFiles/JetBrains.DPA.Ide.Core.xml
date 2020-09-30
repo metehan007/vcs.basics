@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.DPA.Ide.Core</name>
+    </assembly>
+    <members>
+        <member name="M:JetBrains.DPA.Ide.Core.SolutionConfigurationsEx.CreateSolutionConfigurationAndPlatform(JetBrains.Rider.Model.RdConfigurationAndPlatform)">
+            <summary>
+            Copy-paste from RiderActiveConfigurationManager.CreateSolutionConfigurationAndPlatform
+            </summary>
+        </member>
+    </members>
+</doc>

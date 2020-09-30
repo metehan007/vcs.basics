@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Armature.Interface</name>
+    </assembly>
+    <members>
+        <member name="T:Armature.InjectAttribute">
+            <summary>
+              Attribute is used to mark type member into which dependencies should be injected
+            </summary>
+        </member>
+        <member name="F:Armature.InjectAttribute.InjectionPointId">
+            <summary>
+              Id of the injection point. Can be used to distinguishing different points.
+            </summary>
+        </member>
+        <member name="M:Armature.InjectAttribute.#ctor(System.Object)">
+            <param name="injectionPointId">Id of the injection point. Can be used to distinguishing different points.</param>
+        </member>
+    </members>
+</doc>

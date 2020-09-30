@@ -1,0 +1,1439 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Armature.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Armature.Core.ArmatureException">
+            <summary>
+              Exception is used to distinguish internal unexpected situations and error produced by user code
+            </summary>
+        </member>
+        <member name="T:Armature.Core.BuildActions.Constructor.GetConstructorByParameterTypesBuildAction">
+            <summary>
+              "Builds" a constructor Unit of the currently building Unit by parameter types
+            </summary>
+        </member>
+        <member name="T:Armature.Core.BuildActions.Constructor.GetConstructorBytAttributeBuildAction`1">
+            <summary>
+              "Builds" a constructor Unit of the currently building Unit marked with attribute which satisfies user provided conditions
+            </summary>
+        </member>
+        <member name="T:Armature.Core.BuildActions.Constructor.GetInjectPointConstructorBuildAction">
+            <summary>
+              "Builds" a constructor Unit of the currently building Unit marked with <see cref="T:Armature.InjectAttribute" /> with
+              specified <see cref="F:Armature.InjectAttribute.InjectionPointId" />
+            </summary>
+        </member>
+        <member name="T:Armature.Core.BuildActions.Constructor.GetLongestConstructorBuildAction">
+            <summary>
+              "Builds" a constructor Unit of the currently building Unit with biggest number of parameters
+            </summary>
+        </member>
+        <member name="T:Armature.Core.BuildActions.CreateValueToInjectBuildAction">
+            <summary>
+              Base class for build actions building values to inject
+            </summary>
+        </member>
+        <member name="T:Armature.Core.BuildActions.Creation.CreateByFactoryMethodBuildAction`1">
+            <summary>
+              Build action building an Unit using factory method
+            </summary>
+        </member>
+        <member name="T:Armature.Core.BuildActions.Creation.CreateByFactoryMethodBuildAction">
+            <summary>
+              Build action building an Unit using factory method with input parameters
+            </summary>
+        </member>
+        <member name="T:Armature.Core.BuildActions.Creation.CreateByFactoryMethodBuildAction`2">
+            <inheritdoc cref="T:Armature.Core.BuildActions.Creation.CreateByFactoryMethodBuildAction" />
+        </member>
+        <member name="T:Armature.Core.BuildActions.Creation.CreateByFactoryMethodBuildAction`3">
+            <inheritdoc cref="T:Armature.Core.BuildActions.Creation.CreateByFactoryMethodBuildAction" />
+        </member>
+        <member name="T:Armature.Core.BuildActions.Creation.CreateByFactoryMethodBuildAction`4">
+            <inheritdoc cref="T:Armature.Core.BuildActions.Creation.CreateByFactoryMethodBuildAction" />
+        </member>
+        <member name="T:Armature.Core.BuildActions.Creation.CreateByFactoryMethodBuildAction`5">
+            <inheritdoc cref="T:Armature.Core.BuildActions.Creation.CreateByFactoryMethodBuildAction" />
+        </member>
+        <member name="T:Armature.Core.BuildActions.Creation.CreateByFactoryMethodBuildAction`6">
+            <inheritdoc cref="T:Armature.Core.BuildActions.Creation.CreateByFactoryMethodBuildAction" />
+        </member>
+        <member name="T:Armature.Core.BuildActions.Creation.CreateByFactoryMethodBuildAction`7">
+            <inheritdoc cref="T:Armature.Core.BuildActions.Creation.CreateByFactoryMethodBuildAction" />
+        </member>
+        <member name="T:Armature.Core.BuildActions.Creation.CreateByFactoryMethodBuildAction`8">
+            <inheritdoc cref="T:Armature.Core.BuildActions.Creation.CreateByFactoryMethodBuildAction" />
+        </member>
+        <member name="T:Armature.Core.BuildActions.Creation.CreateByReflectionBuildAction">
+            <summary>
+              Builds an Unit using reflection
+            </summary>
+        </member>
+        <member name="T:Armature.Core.BuildActions.OrderedBuildActionContainer">
+            <summary>
+              This container is used mostly for "default" build actions applied to any unit under construction.
+              For example by default we want to find attributed constructor and if there is no any get longest constructor, set these two actions in right order
+              into <see cref="T:Armature.Core.BuildActions.OrderedBuildActionContainer" /> to reach such behaviour.
+            </summary>
+            <remarks>
+              This class implements <see cref="T:System.Collections.IEnumerable" /> and has <see cref="M:Armature.Core.BuildActions.OrderedBuildActionContainer.Add(Armature.Core.IBuildAction)" /> method in order to make possible compact and readable initialization like
+              new OrderedBuildActionContainer
+              {
+              new GetInjectPointConstructorBuildAction(),
+              new GetLongestConstructorBuildAction()
+              }
+            </remarks>
+        </member>
+        <member name="T:Armature.Core.BuildActions.Parameter.CreateParameterValueBuildAction">
+            <summary>
+              "Builds" value to inject by using <see cref="P:System.Reflection.ParameterInfo.ParameterType" /> and provided token
+            </summary>
+        </member>
+        <member name="T:Armature.Core.BuildActions.Parameter.CreateParameterValueForInjectPointBuildAction">
+            <summary>
+              Builds value to inject by using <see cref="P:System.Reflection.ParameterInfo.ParameterType" /> and <see cref="F:Armature.InjectAttribute.InjectionPointId" /> as token
+            </summary>
+        </member>
+        <member name="T:Armature.Core.BuildActions.Property.CreatePropertyValueBuildAction">
+            <summary>
+              Builds value to inject into property by using <see cref="P:System.Reflection.PropertyInfo.PropertyType" /> and provided token
+            </summary>
+        </member>
+        <member name="T:Armature.Core.BuildActions.Property.CreatePropertyValueForInjectPointBuildAction">
+            <summary>
+              Builds value to inject by using <see cref="P:System.Reflection.PropertyInfo.PropertyType" /> and <see cref="F:Armature.InjectAttribute.InjectionPointId" /> as token
+            </summary>
+        </member>
+        <member name="T:Armature.Core.BuildActions.Property.GetPropertyByAttributeBuildAction`1">
+            <summary>
+              "Builds" a property Unit of the currently building Unit marked with attribute which satisfies user provided conditions
+            </summary>
+        </member>
+        <member name="T:Armature.Core.BuildActions.Property.GetPropertyByInjectPointBuildAction">
+            <summary>
+              "Builds" a list of properties Unit of the currently building Unit marked with <see cref="T:Armature.InjectAttribute" /> with
+              specified <see cref="F:Armature.InjectAttribute.InjectionPointId" />
+            </summary>
+        </member>
+        <member name="T:Armature.Core.BuildActions.Property.GetPropertyByNameBuildAction">
+            <summary>
+              "Builds" a constructor Unit of the currently building Unit with provided names
+            </summary>
+        </member>
+        <member name="T:Armature.Core.BuildActions.Property.GetPropertyByTypeBuildAction">
+            <summary>
+              "Builds" a property Unit of the currently building Unit of specified type
+              specified <see cref="F:Armature.InjectAttribute.InjectionPointId" />
+            </summary>
+        </member>
+        <member name="T:Armature.Core.BuildActions.Property.InjectIntoPropertiesBuildAction">
+            <summary>
+              Injects values into building Unit properties specified for injection
+            </summary>
+        </member>
+        <member name="T:Armature.Core.BuildActions.RedirectOpenGenericTypeBuildAction">
+            <summary>
+              Build action redirects building of unit of one open generic type to the unit of another open generic type.
+              E.g. redirecting interface to the implementation
+            </summary>
+        </member>
+        <member name="T:Armature.Core.BuildActions.RedirectTypeBuildAction">
+            <summary>
+              Build action redirects building of unit of one type to the unit of another type. E.g. redirecting interface to the implementation
+            </summary>
+        </member>
+        <member name="T:Armature.Core.BuildActions.SingletonBuildAction">
+            <summary>
+              Build action which caches built unit in <see cref="M:Armature.Core.BuildActions.SingletonBuildAction.PostProcess(Armature.Core.IBuildSession)" /> and then set it as
+              <see cref="T:Armature.Core.BuildResult" /> in <see cref="M:Armature.Core.BuildActions.SingletonBuildAction.Process(Armature.Core.IBuildSession)" />.
+              Simplest eternal singleton.
+            </summary>
+        </member>
+        <member name="T:Armature.Core.Builder">
+            <summary>
+              The builder of units. It is the convenient way to keep corresponding build plans (<see cref="T:Armature.Core.BuildPlansCollection" />),
+              build stages, and parent builders to pass into <see cref="T:Armature.Core.BuildSession" /> which is instantiated independently.
+              Building a unit it goes over all "build stages", for each stage it gets a build action if any and executes it see
+              <see cref="M:Armature.Core.Builder.#ctor(System.Collections.Generic.IEnumerable{System.Object},Armature.Core.Builder[])" /> for details.
+            </summary>
+        </member>
+        <member name="M:Armature.Core.Builder.#ctor(System.Object[])">
+            <param name="stages">The ordered collection of build stages all of which are performed to build a unit</param>
+        </member>
+        <member name="M:Armature.Core.Builder.#ctor(System.Collections.Generic.IEnumerable{System.Object},Armature.Core.Builder[])">
+            <param name="stages">The ordered collection of build stages all of which are performed to build a unit</param>
+            <param name="parentBuilders">
+              If unit is not built and <paramref name="parentBuilders" /> are provided, trying to build a unit using
+              parent builders one by one in the order they passed into constructor
+            </param>
+        </member>
+        <member name="M:Armature.Core.Builder.BuildUnit(Armature.Core.UnitInfo,Armature.Core.BuildPlansCollection)">
+            <summary>
+              Builds a unit represented by <see cref="T:Armature.Core.UnitInfo" />
+            </summary>
+            <param name="unitInfo">Building unit "id"</param>
+            <param name="auxBuildPlans">Additional build plans to build a unit or its dependencies</param>
+            <returns>Returns an instance or null if null is registered as an unit.</returns>
+            <exception cref="T:Armature.Core.ArmatureException">Throws if unit wasn't built by this or any parent containers</exception>
+        </member>
+        <member name="M:Armature.Core.Builder.BuildAllUnits(Armature.Core.UnitInfo,Armature.Core.BuildPlansCollection)">
+            <summary>
+              Builds all units represented by <see cref="T:Armature.Core.UnitInfo" />
+            </summary>
+            <param name="unitInfo">Building unit "id"</param>
+            <param name="auxBuildPlans">Additional build plans to build a unit or its dependencies</param>
+            <returns>Returns an instance or null if null is registered as an unit.</returns>
+            <exception cref="T:Armature.Core.ArmatureException">Throws if unit wasn't built by this or any parent containers</exception>
+        </member>
+        <member name="T:Armature.Core.BuildPlansCollection">
+            <summary>
+              The collection of build plans. Build plan of the unit is the tree of units sequence matchers containing build actions.
+              All build plans are contained as a forest of trees.
+              See <see cref="T:Armature.Core.IUnitSequenceMatcher" /> for details.
+            </summary>
+            <remarks>
+              This class implements <see cref="T:System.Collections.IEnumerable" /> and has <see cref="M:Armature.Core.BuildPlansCollection.Add(Armature.Core.IUnitSequenceMatcher)" /> method in order to make possible compact and readable initialization like
+              new Builder(...)
+              {
+                new AnyUnitSequenceMatcher
+                {
+                  new LeafUnitSequenceMatcher(ConstructorMatcher.Instance, 0)
+                    .AddBuildAction(BuildStage.Create, new GetLongestConstructorBuildAction()),
+                  new LeafUnitSequenceMatcher(ParameterMatcher.Instance, ParameterMatchingWeight.Lowest)
+                    .AddBuildAction(BuildStage.Create, new RedirectParameterInfoBuildAction())
+                }
+              };
+            </remarks>
+        </member>
+        <member name="P:Armature.Core.BuildPlansCollection.Children">
+            <summary>
+              Forest of <see cref="T:Armature.Core.IUnitSequenceMatcher" /> trees
+            </summary>
+        </member>
+        <member name="M:Armature.Core.BuildPlansCollection.GetBuildActions(Armature.Core.Common.ArrayTail{Armature.Core.UnitInfo},System.Int32)">
+            <summary>
+              Returns build actions which should be performed to build an unit represented by the last item of <paramref name="buildingUnitsSequence" />
+            </summary>
+            <param name="buildingUnitsSequence">
+              The sequence of units representing a build session, the last one is the unit to be built,
+              the previous are the context of the build session. Each next unit info is the dependency of the previous one.
+            </param>
+            <param name="inputWeight">
+              The weight of matching which used by children matchers to calculate a final weight of matching
+              Not applicable to BuildPlansCollection in common case
+            </param>
+            <remarks>
+              If there is type A which depends on class B, during building A, B should be built and build sequence will be
+              [A, B] in this case.
+            </remarks>
+            <returns>
+              Returns all matched build actions for the <paramref name="buildingUnitsSequence" />. All actions are grouped by a building stage
+              and coupled with a "weight of matching". See <see cref="T:Armature.Core.MatchedBuildActions" /> type declaration for details.
+            </returns>
+        </member>
+        <member name="T:Armature.Core.BuildPlansCollection.Root">
+            <summary>
+              Reuse implementation of <see cref="T:Armature.Core.UnitSequenceMatcher.UnitSequenceMatcherWithChildren" /> to implement <see cref="T:Armature.Core.BuildPlansCollection" /> public interface
+            </summary>
+        </member>
+        <member name="T:Armature.Core.BuildResult">
+            <summary>
+              Represents a result of building of an Unit, null is a valid value of the <see cref="F:Armature.Core.BuildResult.Value" />.
+            </summary>
+        </member>
+        <member name="T:Armature.Core.BuildSession">
+            <summary>
+              Represents whole build session of the one Unit, all dependency of the built unit are built in context of one build session
+            </summary>
+        </member>
+        <member name="M:Armature.Core.BuildSession.BuildUnit(Armature.Core.UnitInfo,System.Collections.Generic.IEnumerable{System.Object},Armature.Core.BuildPlansCollection,Armature.Core.BuildPlansCollection,Armature.Core.Builder[])">
+            <summary>
+              Builds a Unit represented by <paramref name="unitInfo" />
+            </summary>
+            <param name="unitInfo">"Id" of the unit to build. See <see cref="T:Armature.Core.IUnitSequenceMatcher" /> for details</param>
+            <param name="buildStages">The conveyor of build stages. See <see cref="T:Armature.Core.Builder" /> for details</param>
+            <param name="buildPlans">Build plans used to build a unit</param>
+            <param name="runtimeBuildPlans">Build plans collection contains additional build plans passed into <see cref="M:Armature.Core.Builder.BuildUnit(Armature.Core.UnitInfo,Armature.Core.BuildPlansCollection)" /> method </param>
+            <param name="parentBuilders">
+              If unit is not built and <paramref name="parentBuilders" /> are provided, trying to build a unit using
+              parent builders one by one in the order they passed into constructor
+            </param>
+        </member>
+        <member name="M:Armature.Core.BuildSession.BuildAllUnits(Armature.Core.UnitInfo,System.Collections.Generic.IEnumerable{System.Object},Armature.Core.BuildPlansCollection,Armature.Core.BuildPlansCollection,Armature.Core.Builder[])">
+            <summary>
+              Builds all Units represented by <paramref name="unitInfo" />
+            </summary>
+            <param name="unitInfo">"Id" of the unit to build. See <see cref="T:Armature.Core.IUnitSequenceMatcher" /> for details</param>
+            <param name="buildStages">The conveyor of build stages. See <see cref="T:Armature.Core.Builder" /> for details</param>
+            <param name="buildPlans">Build plans used to build a unit</param>
+            <param name="runtimeBuildPlans">Build plans collection contains additional build plans passed into <see cref="M:Armature.Core.Builder.BuildUnit(Armature.Core.UnitInfo,Armature.Core.BuildPlansCollection)" /> method </param>
+            <param name="parentBuilders">
+              If unit is not built and <paramref name="parentBuilders" /> are provided, trying to build a unit using
+              parent builders one by one in the order they passed into constructor
+            </param>
+        </member>
+        <member name="M:Armature.Core.BuildSession.BuildUnit(Armature.Core.UnitInfo)">
+            <summary>
+              Builds a Unit represented by <paramref name="unitInfo" />
+            </summary>
+            <param name="unitInfo">"Id" of the unit to build. See <see cref="T:Armature.Core.IUnitSequenceMatcher" /> for details</param>
+        </member>
+        <member name="M:Armature.Core.BuildSession.BuildAllUnits(Armature.Core.UnitInfo)">
+            <summary>
+              Builds all Units represented by <paramref name="unitInfo" />
+            </summary>
+            <param name="unitInfo">"Id" of the unit to build. See <see cref="T:Armature.Core.IUnitSequenceMatcher" /> for details</param>
+        </member>
+        <member name="T:Armature.Core.BuildSession.Interface">
+            <summary>
+              This is an restricted interface of the <see cref="T:Armature.Core.BuildSession" /> passed to <see cref="M:Armature.Core.IBuildAction.Process(Armature.Core.IBuildSession)" /> and <see cref="M:Armature.Core.IBuildAction.PostProcess(Armature.Core.IBuildSession)" />
+            </summary>
+        </member>
+        <member name="P:Armature.Core.BuildSession.Interface.BuildResult">
+            <inheritdoc />
+        </member>
+        <member name="P:Armature.Core.BuildSession.Interface.BuildSequence">
+            <inheritdoc />
+        </member>
+        <member name="M:Armature.Core.BuildSession.Interface.BuildUnit(Armature.Core.UnitInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:Armature.Core.BuildSession.Interface.BuildAllUnits(Armature.Core.UnitInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:Armature.Core.BuildSessionExtension.GetConstructorOf(Armature.Core.IBuildSession,System.Type)">
+            <summary>
+              "Builds" a <see cref="T:System.Reflection.ConstructorInfo" /> for a <see creaf="type" /> by building a unit represented
+              by <see cref="T:Armature.Core.UnitInfo" />(<paramref name="type" />, <see cref="F:Armature.Core.SpecialToken.Constructor" />) via current build session.
+            </summary>
+        </member>
+        <member name="M:Armature.Core.BuildSessionExtension.GetPropertiesToInject(Armature.Core.IBuildSession,System.Type)">
+            <summary>
+              "Builds" a list of properties of currently building Unit (<paramref name="type" />) for injecting dependencies
+            </summary>
+        </member>
+        <member name="M:Armature.Core.BuildSessionExtension.GetValueForProperty(Armature.Core.IBuildSession,System.Reflection.PropertyInfo)">
+            <summary>
+              "Builds" a value to inject into the property representing by <paramref name="propertyInfo" />
+            </summary>
+        </member>
+        <member name="M:Armature.Core.BuildSessionExtension.GetValuesForParameters(Armature.Core.IBuildSession,System.Reflection.ParameterInfo[])">
+            <summary>
+              "Builds" values for parameters by building a set of <see cref="T:Armature.Core.UnitInfo" />(<paramref name="parameters" />[i], <see cref="F:Armature.Core.SpecialToken.InjectValue" />)
+              one by one via current build session
+            </summary>
+        </member>
+        <member name="M:Armature.Core.BuildSessionExtension.GetUnitUnderConstruction(Armature.Core.IBuildSession)">
+            <summary>
+              Returns the currently building Unit in the build session
+            </summary>
+        </member>
+        <member name="T:Armature.Core.Common.ArrayTail`1">
+            <summary>
+              Data structure used to take a tail of the collection w/o memory allocations
+            </summary>
+        </member>
+        <member name="T:Armature.Core.IBuildAction">
+            <summary>
+              Build action. One or more build actions should be performed to build a unit. Building is two-pass process, each build action
+              called twice. <see cref="M:Armature.Core.IBuildAction.PostProcess(Armature.Core.IBuildSession)" /> is called in reverse order of <see cref="M:Armature.Core.IBuildAction.Process(Armature.Core.IBuildSession)" />
+            </summary>
+        </member>
+        <member name="M:Armature.Core.IBuildAction.Process(Armature.Core.IBuildSession)">
+            <summary>
+              This method is called first for all matched actions in direct order.
+              Once <see cref="P:Armature.Core.IBuildSession.BuildResult" /> is set by any action, no other actions <see cref="M:Armature.Core.IBuildAction.Process(Armature.Core.IBuildSession)" /> are called.
+            </summary>
+        </member>
+        <member name="M:Armature.Core.IBuildAction.PostProcess(Armature.Core.IBuildSession)">
+            <summary>
+              This method is called when all actions for which <see cref="M:Armature.Core.IBuildAction.Process(Armature.Core.IBuildSession)" /> was called are rewind after the unit is just built
+            </summary>
+        </member>
+        <member name="T:Armature.Core.IBuildSession">
+            <summary>
+              Interface of build session to pass into <see cref="T:Armature.Core.IBuildAction" />
+            </summary>
+        </member>
+        <member name="P:Armature.Core.IBuildSession.BuildResult">
+            <summary>
+              The result of building. Build actions can check if the unit is already built, or set the result.
+            </summary>
+        </member>
+        <member name="P:Armature.Core.IBuildSession.BuildSequence">
+            <summary>
+              The sequence of units representing a build session, the last one is the unit under construction,
+              the previous are the context of the build session. Each next unit info is the dependency of the previous one.
+            </summary>
+        </member>
+        <member name="M:Armature.Core.IBuildSession.BuildUnit(Armature.Core.UnitInfo)">
+            <summary>
+              Builds a unit represented by <see cref="T:Armature.Core.UnitInfo" /> in the context of the current build session
+            </summary>
+            <returns>Returns an instance or null if unit can't be built.</returns>
+        </member>
+        <member name="M:Armature.Core.IBuildSession.BuildAllUnits(Armature.Core.UnitInfo)">
+            <summary>
+              Builds all units represented by <see cref="T:Armature.Core.UnitInfo" /> in the context of the current build session
+            </summary>
+            <returns>Returns an instance or null if unit can't be built.</returns>
+        </member>
+        <member name="T:Armature.Core.IUnitMatcher">
+            <summary>
+              Represents a matcher which matches the unit with a pattern.
+            </summary>
+            <remarks>
+              Unlike <see cref="T:Armature.Core.IUnitSequenceMatcher" /> which represent a logic how the units sequence is treated, this matcher matches one unit.
+              Using to reuse logic of matching one unit in different <see cref="T:Armature.Core.IUnitSequenceMatcher" />
+            </remarks>
+        </member>
+        <member name="T:Armature.Core.IUnitSequenceMatcher">
+            <summary>
+              Represents a matcher which matches the sequence of building units with a pattern
+            </summary>
+        </member>
+        <member name="P:Armature.Core.IUnitSequenceMatcher.Children">
+            <summary>
+              The collection of all child matchers, used to find existing one, add new, or replace one with another
+            </summary>
+        </member>
+        <member name="M:Armature.Core.IUnitSequenceMatcher.GetBuildActions(Armature.Core.Common.ArrayTail{Armature.Core.UnitInfo},System.Int32)">
+            <summary>
+              Returns build actions for building unit if matches it
+            </summary>
+            <param name="buildingUnitsSequence">The sequence of units representing the context of currently building unit</param>
+            <param name="inputWeight">The weight of matching which used by children matchers to calculate a final weight of matching</param>
+            <returns>Returns a collections of weighted build actions grouped by a building stage</returns>
+        </member>
+        <member name="M:Armature.Core.IUnitSequenceMatcher.AddBuildAction(System.Object,Armature.Core.IBuildAction)">
+            <summary>
+              Adds a <see cref="T:Armature.Core.IBuildAction" /> for a unit which is matched by this matcher
+            </summary>
+            <param name="buildStage">Build stage in which the build action is applied</param>
+            <param name="buildAction">Build action</param>
+            <returns>Returns 'this' in order to use fluent syntax</returns>
+        </member>
+        <member name="T:Armature.Core.Logging.Log">
+            <summary>
+              Class is used to log Armature activities in human friendly form. Writes data into <see cref="T:System.Diagnostics.Trace" />, so
+              add a listener to see the log.
+            </summary>
+        </member>
+        <member name="P:Armature.Core.Logging.Log.LogFullTypeName">
+            <summary>
+              Set should full type name be logged or only short name w/o namespace to simplify reading.
+            </summary>
+        </member>
+        <member name="M:Armature.Core.Logging.Log.Enabled(Armature.Core.Logging.LogLevel)">
+            <summary>
+              Used to enable logging in a limited scope using "using" C# keyword
+            </summary>
+        </member>
+        <member name="M:Armature.Core.Logging.Log.Block(Armature.Core.Logging.LogLevel)">
+            <summary>
+              Used to make an indented "block" in log data
+            </summary>
+        </member>
+        <member name="M:Armature.Core.Logging.Log.Block(Armature.Core.Logging.LogLevel,System.String,System.Object[])">
+            <summary>
+              Used to make a named and indented "block" in log data
+            </summary>
+        </member>
+        <member name="M:Armature.Core.Logging.Log.Block(Armature.Core.Logging.LogLevel,System.Func{System.String})">
+            <summary>
+              Used to make a named and indented "block" in log data
+            </summary>
+        </member>
+        <member name="M:Armature.Core.Logging.Log.Block``1(Armature.Core.Logging.LogLevel,System.Func{``0,System.String},``0)">
+            <summary>
+              Used to make a named and indented "block" in log data
+            </summary>
+        </member>
+        <member name="M:Armature.Core.Logging.Log.AddIndent(System.Boolean,System.Int32)">
+            <summary>
+              Used to make an indented "block" in log data
+            </summary>
+        </member>
+        <member name="M:Armature.Core.Logging.Log.ExecuteIfEnabled(Armature.Core.Logging.LogLevel,System.Action)">
+            <summary>
+            Executes action if <paramref name="logLevel"/> satisfies current Log level. See <see cref="M:Armature.Core.Logging.Log.Enabled(Armature.Core.Logging.LogLevel)"/> for details
+            </summary>
+            <param name="logLevel"></param>
+            <param name="action"></param>
+        </member>
+        <member name="M:Armature.Core.Logging.Log.WriteLine(Armature.Core.Logging.LogLevel,System.Func{System.String})">
+            <summary>
+              This message calls <paramref name="createMessage"/> only if Logging is enabled for <paramref name="logLevel"/>,
+              use it calculating arguments for logging takes a time.
+            </summary>
+        </member>
+        <member name="M:Armature.Core.Logging.Log.WriteLine``1(Armature.Core.Logging.LogLevel,System.Func{``0,System.String},``0)">
+            <summary>
+              This message calls <paramref name="createMessage"/> only if Logging is enabled for <paramref name="logLevel"/>,
+              use it calculating arguments for logging takes a time.
+            </summary>
+        </member>
+        <member name="M:Armature.Core.Logging.Log.ToLogString(System.Type)">
+            <summary>
+              Returns the name of <paramref name="type" /> respecting <see cref="P:Armature.Core.Logging.Log.LogFullTypeName" /> property
+            </summary>
+        </member>
+        <member name="M:Armature.Core.Logging.Log.ToLogString(System.Object)">
+            <summary>
+              Returns log representation of object, some objects logs in more friendly form then common <see cref="M:System.Object.ToString" /> returns
+            </summary>
+        </member>
+        <member name="T:Armature.Core.MatchedBuildActions">
+            <summary>
+              Collection of build actions from matched build plans grouped by the build stage
+            </summary>
+        </member>
+        <member name="M:Armature.Core.MatchedBuildActionsExtension.Merge(Armature.Core.MatchedBuildActions,Armature.Core.MatchedBuildActions)">
+            <summary>
+              Merges two collections into one
+            </summary>
+        </member>
+        <member name="M:Armature.Core.MatchedBuildActionsExtension.GetTopmostAction(Armature.Core.MatchedBuildActions,System.Object)">
+            <summary>
+              Returns the build action with biggest matching weight for the build stage
+            </summary>
+            <exception cref="T:Armature.Core.ArmatureException">Throws if there are more than one action with equal matching weight</exception>
+        </member>
+        <member name="T:Armature.Core.SpecialToken">
+            <summary>
+              These tokens are used by Armature framework to distinguish internal units to be built  from possible users for the same types
+            </summary>
+        </member>
+        <member name="F:Armature.Core.SpecialToken.Constructor">
+            <summary>
+              Is used to "build" a <see cref="T:System.Reflection.ConstructorInfo" /> for a type
+            </summary>
+        </member>
+        <member name="F:Armature.Core.SpecialToken.Property">
+            <summary>
+              Is used to build a <see cref="T:System.Reflection.PropertyInfo" />
+            </summary>
+        </member>
+        <member name="F:Armature.Core.SpecialToken.InjectValue">
+            <summary>
+              Is used to build a value for inject point
+            </summary>
+        </member>
+        <member name="T:Armature.Core.Token">
+            <summary>
+              Not equality member are needed for this class, <see cref="F:Armature.Core.Token._name" /> is used only for debug purpose, tokens should be equal by reference.
+            </summary>
+        </member>
+        <member name="F:Armature.Core.Token.Any">
+            <summary>
+              Means "any token"
+            </summary>
+        </member>
+        <member name="F:Armature.Core.Token.Propagate">
+            <summary>
+              Used to propagate token to building dependencies
+            </summary>
+        </member>
+        <member name="T:Armature.Core.UnitInfo">
+            <summary>
+              Describes an unit to build. <see cref="T:Armature.Core.IUnitSequenceMatcher" /> matches with passed collection of <see cref="T:Armature.Core.UnitInfo" />
+            </summary>
+        </member>
+        <member name="M:Armature.Core.UnitInfo.Matches(Armature.Core.UnitInfo)">
+            <summary>
+            Matching, unlike equality, takes into consideration <see cref="F:Armature.Core.Token.Any"/>. Use <see cref="M:Armature.Core.UnitInfo.Equals(Armature.Core.UnitInfo)"/>
+            to add build plans and <see cref="M:Armature.Core.UnitInfo.Matches(Armature.Core.UnitInfo)"/> to build a unit
+            </summary>
+        </member>
+        <member name="M:Armature.Core.UnitInfoExtension.GetUnitType(Armature.Core.UnitInfo)">
+            <summary>
+              Returns a <see cref="T:System.Type" /> if <see cref="F:Armature.Core.UnitInfo.Id" /> is a type, otherwise throws exception.
+            </summary>
+        </member>
+        <member name="M:Armature.Core.UnitInfoExtension.GetUnitTypeSafe(Armature.Core.UnitInfo)">
+            <summary>
+              Returns a <see cref="T:System.Type" /> if <see cref="F:Armature.Core.UnitInfo.Id" /> is a type, otherwise null.
+            </summary>
+        </member>
+        <member name="T:Armature.Core.UnitMatchers.AnyTypeMatcher">
+            <summary>
+              Matches any type which can be instantiated
+            </summary>
+        </member>
+        <member name="T:Armature.Core.UnitMatchers.ConstructorMatcher">
+            <summary>
+              Matches Unit representing "constructor" of the currently building Unit
+            </summary>
+        </member>
+        <member name="T:Armature.Core.UnitMatchers.InjectPointByAttributeMatcher`1">
+            <summary>
+              Base class for matchers matching an "inject point" marked with attribute which satisfies user provided conditions
+            </summary>
+        </member>
+        <member name="T:Armature.Core.UnitMatchers.InjectPointByIdMatcher">
+            <summary>
+              Base class for matchers matching an "inject point" marked with <see cref="T:Armature.InjectAttribute" /> with specified <see cref="F:Armature.InjectAttribute.InjectionPointId" />
+            </summary>
+        </member>
+        <member name="T:Armature.Core.UnitMatchers.InjectPointByNameMatcher">
+            <summary>
+              Base class for matchers matching an "inject point" by name
+            </summary>
+        </member>
+        <member name="T:Armature.Core.UnitMatchers.InjectPointByStrictTypeMatcher">
+            <summary>
+              Base class for matchers matching an "inject point" by exact type matching
+            </summary>
+        </member>
+        <member name="T:Armature.Core.UnitMatchers.InjectPointByValueMatcher">
+            <summary>
+              Base class for matchers matching an "inject point" suited for provided value type
+            </summary>
+        </member>
+        <member name="T:Armature.Core.UnitMatchers.OpenGenericTypeMatcher">
+            <summary>
+              Matches <see cref="T:Armature.Core.UnitInfo" /> with an open generic type
+            </summary>
+        </member>
+        <member name="T:Armature.Core.UnitMatchers.Parameters.ParameterByAttributeMatcher`1">
+            <summary>
+              Matches parameter marked with attribute which satisfies user provided conditions
+            </summary>
+        </member>
+        <member name="T:Armature.Core.UnitMatchers.Parameters.ParameterByInjectPointMatcher">
+            <summary>
+              Matches parameter marked with <see cref="T:Armature.InjectAttribute" /> with specified <see cref="F:Armature.InjectAttribute.InjectionPointId" />
+            </summary>
+        </member>
+        <member name="T:Armature.Core.UnitMatchers.Parameters.ParameterByNameMatcher">
+            <summary>
+              Matches parameter by name
+            </summary>
+        </member>
+        <member name="T:Armature.Core.UnitMatchers.Parameters.ParameterByStrictTypeMatcher">
+            <summary>
+              Matches parameter by exact type matching
+            </summary>
+        </member>
+        <member name="T:Armature.Core.UnitMatchers.Parameters.ParameterByValueMatcher">
+            <summary>
+              Matches parameter suited for provided value type
+            </summary>
+        </member>
+        <member name="T:Armature.Core.UnitMatchers.Parameters.ParameterValueMatcher">
+            <summary>
+              Matches Unit representing "value for parameter" for the currently building Unit
+            </summary>
+        </member>
+        <member name="T:Armature.Core.UnitMatchers.Properties.PropertyByAttributeMatcher`1">
+            <summary>
+              Matches property marked with attribute which satisfies user provided conditions
+            </summary>
+        </member>
+        <member name="T:Armature.Core.UnitMatchers.Properties.PropertyByInjectPointMatcher">
+            <summary>
+              Matches property marked with <see cref="T:Armature.InjectAttribute" /> with specified <see cref="F:Armature.InjectAttribute.InjectionPointId" />
+            </summary>
+        </member>
+        <member name="T:Armature.Core.UnitMatchers.Properties.PropertyByNameMatcher">
+            <summary>
+              Matches property by name
+            </summary>
+        </member>
+        <member name="T:Armature.Core.UnitMatchers.Properties.PropertyByStrictTypeMatcher">
+            <summary>
+              Matches property by exact type matching
+            </summary>
+        </member>
+        <member name="T:Armature.Core.UnitMatchers.Properties.PropertyByValueMatcher">
+            <summary>
+              Matches property suited for provided value type
+            </summary>
+        </member>
+        <member name="T:Armature.Core.UnitMatchers.Properties.PropertyMatcher">
+            <summary>
+              Matches Unit representing "property" of the currently building Unit
+            </summary>
+        </member>
+        <member name="T:Armature.Core.UnitMatchers.Properties.PropertyValueMatcher">
+            <summary>
+              Matches Unit representing "value for property" of the currently building Unit
+            </summary>
+        </member>
+        <member name="T:Armature.Core.UnitMatchers.UnitInfoMatcher">
+            <summary>
+              Matches one <see cref="F:Armature.Core.UnitMatchers.UnitInfoMatcher.UnitInfo" /> with other.
+            </summary>
+        </member>
+        <member name="M:Armature.Core.UnitSequenceMatcherExtension.AddOrGetUnitSequenceMatcher``1(Armature.Core.IUnitSequenceMatcher,``0)">
+            <summary>
+              Adds the <paramref name="unitSequenceMatcher" /> into <paramref name="parent" />, if <paramref name="parent" /> already contains the matcher equal to
+              <paramref name="unitSequenceMatcher" /> it does not add it but return the existent one. This method is used to add on a build plan or
+              make a several registrations regarding one Unit separately.
+            </summary>
+            <remarks>Call it first and then fill returned <see cref="T:Armature.Core.IUnitSequenceMatcher" /> with build actions or perform other needed actions.</remarks>
+        </member>
+        <member name="M:Armature.Core.UnitSequenceMatcherExtension.AddUniqueUnitMatcher``1(Armature.Core.IUnitSequenceMatcher,``0)">
+            <summary>
+              Adds the <paramref name="unitSequenceMatcher" /> into <paramref name="parent" />, if <paramref name="parent" /> already contains the matcher equal to
+              <paramref name="unitSequenceMatcher" /> throws exception.
+            </summary>
+        </member>
+        <member name="T:Armature.Core.UnitSequenceMatcher.AnyUnitSequenceMatcher">
+            <summary>
+              Matches any sequence of building units, thus passing the unit under construction to <see cref="P:Armature.Core.IUnitSequenceMatcher.Children" /> and merge their
+              build actions with its own.
+            </summary>
+            <remarks>
+              This class implements <see cref="T:System.Collections.IEnumerable" /> and has <see cref="M:Armature.Core.UnitSequenceMatcher.AnyUnitSequenceMatcher.Add(Armature.Core.IUnitSequenceMatcher)" /> method in order to make possible compact and readable initialization like
+              new AnyUnitSequenceMatcher
+              {
+              new LeafUnitSequenceMatcher(ConstructorMatcher.Instance, 0)
+              .AddBuildAction(BuildStage.Create, new GetLongestConstructorBuildAction()),
+              new LeafUnitSequenceMatcher(ParameterMatcher.Instance, ParameterMatchingWeight.Lowest)
+              .AddBuildAction(BuildStage.Create, new RedirectParameterInfoBuildAction())
+              };
+            </remarks>
+        </member>
+        <member name="M:Armature.Core.UnitSequenceMatcher.AnyUnitSequenceMatcher.GetBuildActions(Armature.Core.Common.ArrayTail{Armature.Core.UnitInfo},System.Int32)">
+            <summary>
+              Matches any <see cref="T:Armature.Core.UnitInfo" />, so it pass the building unit info into its children and returns merged result
+            </summary>
+        </member>
+        <member name="T:Armature.Core.UnitSequenceMatcher.LastUnitSequenceMatcher">
+            <summary>
+              Matches only unit under construction in the sequence and applies passed <see cref="T:Armature.Core.IUnitMatcher" /> to it.
+              See <see cref="M:Armature.Core.UnitSequenceMatcher.LastUnitSequenceMatcher.#ctor(Armature.Core.IUnitMatcher,System.Int32)" /> and <see cref="M:Armature.Core.UnitSequenceMatcher.LastUnitSequenceMatcher.GetBuildActions(Armature.Core.Common.ArrayTail{Armature.Core.UnitInfo},System.Int32)" /> for details
+            </summary>
+        </member>
+        <member name="M:Armature.Core.UnitSequenceMatcher.LastUnitSequenceMatcher.#ctor(Armature.Core.IUnitMatcher,System.Int32)">
+            <param name="unitMatcher">Object contains the logic of matching with building unit</param>
+            <param name="weight">The weight of matching</param>
+        </member>
+        <member name="M:Armature.Core.UnitSequenceMatcher.LastUnitSequenceMatcher.GetBuildActions(Armature.Core.Common.ArrayTail{Armature.Core.UnitInfo},System.Int32)">
+            <summary>
+              If <paramref name="buildingUnitsSequence" /> contains more then one element return null. This matcher matches only unit under construction which is
+              the last one in the <paramref name="buildingUnitsSequence" />.
+            </summary>
+        </member>
+        <member name="T:Armature.Core.UnitSequenceMatcher.StrictUnitSequenceMatcher">
+            <summary>
+              Matches the first unit in the sequence and only if it matches pass the tail of building
+              sequence to its <see cref="P:Armature.Core.UnitSequenceMatcher.UnitSequenceMatcherWithChildren.Children" />
+            </summary>
+        </member>
+        <member name="M:Armature.Core.UnitSequenceMatcher.StrictUnitSequenceMatcher.GetBuildActions(Armature.Core.Common.ArrayTail{Armature.Core.UnitInfo},System.Int32)">
+            <summary>
+              Moves along the unit building sequence from left to right skipping units until it encounters a matching unit.
+              If it is the unit under construction, returns build actions for it, if no, pass the rest of the sequence to each child and returns merged actions.
+            </summary>
+        </member>
+        <member name="T:Armature.Core.UnitSequenceMatcher.UnitSequenceMatcher">
+            <summary>
+              Base class implementing the logic of adding build actions
+            </summary>
+        </member>
+        <member name="T:Armature.Core.UnitSequenceMatcher.UnitSequenceMatchingWeight">
+            <summary>
+              Weights which are added to the build action by unit sequence matchers of certain kind.
+            </summary>
+            <remarks>
+              In order to change default priority of matchers inherit this class and change values in static constructor.
+              !!! Instantiate inherited class to ensure that static ctor is called !!!
+            </remarks>
+        </member>
+        <member name="P:Armature.Core.UnitSequenceMatcher.UnitSequenceMatchingWeight.AnyUnit">
+            <summary>
+              Is used for <see cref="T:Armature.Core.UnitSequenceMatcher.AnyUnitSequenceMatcher" />
+            </summary>
+        </member>
+        <member name="P:Armature.Core.UnitSequenceMatcher.UnitSequenceMatchingWeight.WildcardMatchingOpenGenericUnit">
+            <summary>
+              Used for <see cref="T:Armature.Core.UnitSequenceMatcher.WildcardUnitSequenceMatcher" /> which matches with a <see cref="T:Armature.Core.UnitInfo" /> contains open generic type
+            </summary>
+        </member>
+        <member name="P:Armature.Core.UnitSequenceMatcher.UnitSequenceMatchingWeight.WildcardMatchingBaseTypeUnit">
+            <summary>
+              Used for <see cref="T:Armature.Core.UnitSequenceMatcher.WildcardUnitSequenceMatcher" /> which matches with a <see cref="T:Armature.Core.UnitInfo" /> contains inheritors of a type
+            </summary>
+        </member>
+        <member name="P:Armature.Core.UnitSequenceMatcher.UnitSequenceMatchingWeight.WildcardMatchingUnit">
+            <summary>
+              Used for <see cref="T:Armature.Core.UnitSequenceMatcher.WildcardUnitSequenceMatcher" /> which matches with a <see cref="T:Armature.Core.UnitInfo" /> contains a <see cref="T:System.Type" />
+            </summary>
+        </member>
+        <member name="P:Armature.Core.UnitSequenceMatcher.UnitSequenceMatchingWeight.StrictMatchingUnit">
+            <summary>
+              Used for <see cref="T:Armature.Core.UnitSequenceMatcher.StrictUnitSequenceMatcher" /> which matches with a <see cref="T:Armature.Core.UnitInfo" /> contains a <see cref="T:System.Type" />
+            </summary>
+        </member>
+        <member name="T:Armature.Core.UnitSequenceMatcher.UnitSequenceMatcherWithChildren">
+            <summary>
+              Base class exposing the collection of children matchers, gathering and merging build actions from children with its own.
+            </summary>
+        </member>
+        <member name="M:Armature.Core.UnitSequenceMatcher.UnitSequenceMatcherWithChildren.GetChildrenActions(System.Int32,Armature.Core.Common.ArrayTail{Armature.Core.UnitInfo})">
+            <summary>
+              Gets and merges matched actions from all children matchers
+            </summary>
+            <param name="inputMatchingWeight">The weight of matching which passed to children to calculate a final weight of matching.</param>
+            <param name="unitBuildingSequence">The sequence of units building in this build session.</param>
+        </member>
+        <member name="T:Armature.Core.UnitSequenceMatcher.WildcardUnitSequenceMatcher">
+            <summary>
+              Moves along the building units sequence from left to right skipping units until it encounters a matching unit. Behaves like string search with wildcard.
+            </summary>
+        </member>
+        <member name="M:Armature.Core.UnitSequenceMatcher.WildcardUnitSequenceMatcher.GetBuildActions(Armature.Core.Common.ArrayTail{Armature.Core.UnitInfo},System.Int32)">
+            <summary>
+              Moves along the unit building sequence from left to right skipping units until it encounters a matching unit.
+              If it is the unit under construction, returns build actions for it, if no, pass the rest of the sequence to each child and returns merged actions.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.CanBeNullAttribute">
+            <summary>
+              Indicates that the value of the marked element could be <c>null</c> sometimes,
+              so the check for <c>null</c> is necessary before its usage.
+            </summary>
+            <example>
+              <code>
+            [CanBeNull] object Test() => null;
+            
+            void UseTest() {
+              var p = Test();
+              var s = p.ToString(); // Warning: Possible 'System.NullReferenceException'
+            }
+            </code>
+            </example>
+        </member>
+        <member name="T:JetBrains.Annotations.NotNullAttribute">
+            <summary>
+              Indicates that the value of the marked element could never be <c>null</c>.
+            </summary>
+            <example>
+              <code>
+            [NotNull] object Foo() {
+              return null; // Warning: Possible 'null' assignment
+            }
+            </code>
+            </example>
+        </member>
+        <member name="T:JetBrains.Annotations.ItemNotNullAttribute">
+            <summary>
+              Can be applied to symbols of types derived from IEnumerable as well as to symbols of Task
+              and Lazy classes to indicate that the value of a collection item, of the Task.Result property
+              or of the Lazy.Value property can never be null.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.ItemCanBeNullAttribute">
+            <summary>
+              Can be applied to symbols of types derived from IEnumerable as well as to symbols of Task
+              and Lazy classes to indicate that the value of a collection item, of the Task.Result property
+              or of the Lazy.Value property can be null.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.ImplicitNotNullAttribute">
+            <summary>
+              Implicitly apply [NotNull]/[ItemNotNull] annotation to all the of type members and parameters
+              in particular scope where this annotation is used (type declaration or whole assembly).
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.StringFormatMethodAttribute">
+            <summary>
+              Indicates that the marked method builds string by format pattern and (optional) arguments.
+              Parameter, which contains format string, should be given in constructor. The format string
+              should be in <see cref="M:System.String.Format(System.IFormatProvider,System.String,System.Object[])" />-like form.
+            </summary>
+            <example>
+              <code>
+            [StringFormatMethod("message")]
+            void ShowError(string message, params object[] args) { /* do something */ }
+            
+            void Foo() {
+              ShowError("Failed: {0}"); // Warning: Non-existing argument in format string
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:JetBrains.Annotations.StringFormatMethodAttribute.#ctor(System.String)">
+            <param name="formatParameterName">
+              Specifies which parameter of an annotated method should be treated as format-string
+            </param>
+        </member>
+        <member name="T:JetBrains.Annotations.ValueProviderAttribute">
+            <summary>
+              For a parameter that is expected to be one of the limited set of values.
+              Specify fields of which type should be used as values for this parameter.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.InvokerParameterNameAttribute">
+            <summary>
+              Indicates that the function argument should be string literal and match one
+              of the parameters of the caller function. For example, ReSharper annotates
+              the parameter of <see cref="T:System.ArgumentNullException" />.
+            </summary>
+            <example>
+              <code>
+            void Foo(string param) {
+              if (param == null)
+                throw new ArgumentNullException("par"); // Warning: Cannot resolve symbol
+            }
+            </code>
+            </example>
+        </member>
+        <member name="T:JetBrains.Annotations.NotifyPropertyChangedInvocatorAttribute">
+            <summary>
+              Indicates that the method is contained in a type that implements
+              <c>System.ComponentModel.INotifyPropertyChanged</c> interface and this method
+              is used to notify that some property value changed.
+            </summary>
+            <remarks>
+              The method should be non-static and conform to one of the supported signatures:
+              <list>
+                <item>
+                  <c>NotifyChanged(string)</c>
+                </item>
+                <item>
+                  <c>NotifyChanged(params string[])</c>
+                </item>
+                <item>
+                  <c>NotifyChanged{T}(Expression{Func{T}})</c>
+                </item>
+                <item>
+                  <c>NotifyChanged{T,U}(Expression{Func{T,U}})</c>
+                </item>
+                <item>
+                  <c>SetProperty{T}(ref T, T, string)</c>
+                </item>
+              </list>
+            </remarks>
+            <example>
+              <code>
+             public class Foo : INotifyPropertyChanged {
+               public event PropertyChangedEventHandler PropertyChanged;
+             
+               [NotifyPropertyChangedInvocator]
+               protected virtual void NotifyChanged(string propertyName) { ... }
+            
+               string _name;
+             
+               public string Name {
+                 get { return _name; }
+                 set { _name = value; NotifyChanged("LastName"); /* Warning */ }
+               }
+             }
+             </code>
+              Examples of generated notifications:
+              <list>
+                <item>
+                  <c>NotifyChanged("Property")</c>
+                </item>
+                <item>
+                  <c>NotifyChanged(() =&gt; Property)</c>
+                </item>
+                <item>
+                  <c>NotifyChanged((VM x) =&gt; x.Property)</c>
+                </item>
+                <item>
+                  <c>SetProperty(ref myField, value, "Property")</c>
+                </item>
+              </list>
+            </example>
+        </member>
+        <member name="T:JetBrains.Annotations.ContractAnnotationAttribute">
+            <summary>
+              Describes dependency between method input and output.
+            </summary>
+            <syntax>
+              <p>Function Definition Table syntax:</p>
+              <list>
+                <item>FDT      ::= FDTRow [;FDTRow]*</item>
+                <item>FDTRow   ::= Input =&gt; Output | Output &lt;= Input</item>
+                <item>Input    ::= ParameterName: Value [, Input]*</item>
+                <item>Output   ::= [ParameterName: Value]* {halt|stop|void|nothing|Value}</item>
+                <item>Value    ::= true | false | null | notnull | canbenull</item>
+              </list>
+              If method has single input parameter, it's name could be omitted.<br />
+              Using <c>halt</c> (or <c>void</c>/<c>nothing</c>, which is the same)
+              for method output means that the methods doesn't return normally.<br />
+              <c>canbenull</c> annotation is only applicable for output parameters.<br />
+              You can use multiple <c>[ContractAnnotation]</c> for each FDT row,
+              or use single attribute with rows separated by semicolon.<br />
+            </syntax>
+            <examples>
+              <list>
+                <item>
+                  <code>
+            [ContractAnnotation("=> halt")]
+            public void TerminationMethod()
+            </code>
+                </item>
+                <item>
+                  <code>
+            [ContractAnnotation("halt &lt;= condition: false")]
+            public void Assert(bool condition, string text) // regular assertion method
+            </code>
+                </item>
+                <item>
+                  <code>
+            [ContractAnnotation("s:null => true")]
+            public bool IsNullOrEmpty(string s) // string.IsNullOrEmpty()
+            </code>
+                </item>
+                <item>
+                  <code>
+            // A method that returns null if the parameter is null,
+            // and not null if the parameter is not null
+            [ContractAnnotation("null => null; notnull => notnull")]
+            public object Transform(object data) 
+            </code>
+                </item>
+                <item>
+                  <code>
+            [ContractAnnotation("s:null=>false; =>true,result:notnull; =>false, result:null")]
+            public bool TryParse(string s, out Person result)
+            </code>
+                </item>
+              </list>
+            </examples>
+        </member>
+        <member name="T:JetBrains.Annotations.LocalizationRequiredAttribute">
+            <summary>
+              Indicates that marked element should be localized or not.
+            </summary>
+            <example>
+              <code>
+            [LocalizationRequiredAttribute(true)]
+            class Foo {
+              string str = "my string"; // Warning: Localizable string
+            }
+            </code>
+            </example>
+        </member>
+        <member name="T:JetBrains.Annotations.CannotApplyEqualityOperatorAttribute">
+            <summary>
+              Indicates that the value of the marked type (or its derivatives)
+              cannot be compared using '==' or '!=' operators and <c>Equals()</c>
+              should be used instead. However, using '==' or '!=' for comparison
+              with <c>null</c> is always permitted.
+            </summary>
+            <example>
+              <code>
+            [CannotApplyEqualityOperator]
+            class NoEquality { }
+            
+            class UsesNoEquality {
+              void Test() {
+                var ca1 = new NoEquality();
+                var ca2 = new NoEquality();
+                if (ca1 != null) { // OK
+                  bool condition = ca1 == ca2; // Warning
+                }
+              }
+            }
+            </code>
+            </example>
+        </member>
+        <member name="T:JetBrains.Annotations.BaseTypeRequiredAttribute">
+            <summary>
+              When applied to a target attribute, specifies a requirement for any type marked
+              with the target attribute to implement or inherit specific type or types.
+            </summary>
+            <example>
+              <code>
+            [BaseTypeRequired(typeof(IComponent)] // Specify requirement
+            class ComponentAttribute : Attribute { }
+            
+            [Component] // ComponentAttribute requires implementing IComponent interface
+            class MyComponent : IComponent { }
+            </code>
+            </example>
+        </member>
+        <member name="T:JetBrains.Annotations.UsedImplicitlyAttribute">
+            <summary>
+              Indicates that the marked symbol is used implicitly (e.g. via reflection, in external library),
+              so this symbol will not be marked as unused (as well as by other usage inspections).
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.MeansImplicitUseAttribute">
+            <summary>
+              Should be used on attributes and causes ReSharper to not mark symbols marked with such attributes
+              as unused (as well as by other usage inspections)
+            </summary>
+        </member>
+        <member name="F:JetBrains.Annotations.ImplicitUseKindFlags.Access">
+            <summary>Only entity marked with attribute considered used.</summary>
+        </member>
+        <member name="F:JetBrains.Annotations.ImplicitUseKindFlags.Assign">
+            <summary>Indicates implicit assignment to a member.</summary>
+        </member>
+        <member name="F:JetBrains.Annotations.ImplicitUseKindFlags.InstantiatedWithFixedConstructorSignature">
+            <summary>
+              Indicates implicit instantiation of a type with fixed constructor signature.
+              That means any unused constructor parameters won't be reported as such.
+            </summary>
+        </member>
+        <member name="F:JetBrains.Annotations.ImplicitUseKindFlags.InstantiatedNoFixedConstructorSignature">
+            <summary>Indicates implicit instantiation of a type.</summary>
+        </member>
+        <member name="T:JetBrains.Annotations.ImplicitUseTargetFlags">
+            <summary>
+              Specify what is considered used implicitly when marked
+              with <see cref="T:JetBrains.Annotations.MeansImplicitUseAttribute" /> or <see cref="T:JetBrains.Annotations.UsedImplicitlyAttribute" />.
+            </summary>
+        </member>
+        <member name="F:JetBrains.Annotations.ImplicitUseTargetFlags.Members">
+            <summary>Members of entity marked with attribute are considered used.</summary>
+        </member>
+        <member name="F:JetBrains.Annotations.ImplicitUseTargetFlags.WithMembers">
+            <summary>Entity marked with attribute and all its members considered used.</summary>
+        </member>
+        <member name="T:JetBrains.Annotations.PublicAPIAttribute">
+            <summary>
+              This attribute is intended to mark publicly available API
+              which should not be removed and so is treated as used.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.InstantHandleAttribute">
+            <summary>
+              Tells code analysis engine if the parameter is completely handled when the invoked method is on stack.
+              If the parameter is a delegate, indicates that delegate is executed while the method is executed.
+              If the parameter is an enumerable, indicates that it is enumerated while the method is executed.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.PureAttribute">
+            <summary>
+              Indicates that a method does not make any observable state changes.
+              The same as <c>System.Diagnostics.Contracts.PureAttribute</c>.
+            </summary>
+            <example>
+              <code>
+            [Pure] int Multiply(int x, int y) => x * y;
+            
+            void M() {
+              Multiply(123, 42); // Waring: Return value of pure method is not used
+            }
+            </code>
+            </example>
+        </member>
+        <member name="T:JetBrains.Annotations.MustUseReturnValueAttribute">
+            <summary>
+              Indicates that the return value of method invocation must be used.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.ProvidesContextAttribute">
+            <summary>
+              Indicates the type member or parameter of some type, that should be used instead of all other ways
+              to get the value that type. This annotation is useful when you have some "sequence" value evaluated
+              and stored somewhere, meaning that all other ways to get this value must be consolidated with existing one.
+            </summary>
+            <example>
+              <code>
+            class Foo {
+              [ProvidesContext] IBarService _barService = ...;
+            
+              void ProcessNode(INode node) {
+                DoSomething(node, node.GetGlobalServices().Bar);
+                //              ^ Warning: use value of '_barService' field
+              }
+            }
+            </code>
+            </example>
+        </member>
+        <member name="T:JetBrains.Annotations.PathReferenceAttribute">
+            <summary>
+              Indicates that a parameter is a path to a file or a folder within a web project.
+              Path can be relative or absolute, starting from web root (~).
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.SourceTemplateAttribute">
+            <summary>
+              An extension method marked with this attribute is processed by ReSharper code completion
+              as a 'Source Template'. When extension method is completed over some expression, it's source code
+              is automatically expanded like a template at call site.
+            </summary>
+            <remarks>
+              Template method body can contain valid source code and/or special comments starting with '$'.
+              Text inside these comments is added as source code when the template is applied. Template parameters
+              can be used either as additional method parameters or as identifiers wrapped in two '$' signs.
+              Use the <see cref="T:JetBrains.Annotations.MacroAttribute" /> attribute to specify macros for parameters.
+            </remarks>
+            <example>
+              In this example, the 'forEach' method is a source template available over all values
+              of enumerable types, producing ordinary C# 'foreach' statement and placing caret inside block:
+              <code>
+            [SourceTemplate]
+            public static void forEach&lt;T&gt;(this IEnumerable&lt;T&gt; xs) {
+              foreach (var x in xs) {
+                 //$ $END$
+              }
+            }
+            </code>
+            </example>
+        </member>
+        <member name="T:JetBrains.Annotations.MacroAttribute">
+            <summary>
+              Allows specifying a macro for a parameter of a <see cref="T:JetBrains.Annotations.SourceTemplateAttribute">source template</see>.
+            </summary>
+            <remarks>
+              You can apply the attribute on the whole method or on any of its additional parameters. The macro expression
+              is defined in the <see cref="P:JetBrains.Annotations.MacroAttribute.Expression" /> property. When applied on a method, the target
+              template parameter is defined in the <see cref="P:JetBrains.Annotations.MacroAttribute.Target" /> property. To apply the macro silently
+              for the parameter, set the <see cref="P:JetBrains.Annotations.MacroAttribute.Editable" /> property value = -1.
+            </remarks>
+            <example>
+              Applying the attribute on a source template method:
+              <code>
+            [SourceTemplate, Macro(Target = "item", Expression = "suggestVariableName()")]
+            public static void forEach&lt;T&gt;(this IEnumerable&lt;T&gt; collection) {
+              foreach (var item in collection) {
+                //$ $END$
+              }
+            }
+            </code>
+              Applying the attribute on a template method parameter:
+              <code>
+            [SourceTemplate]
+            public static void something(this Entity x, [Macro(Expression = "guid()", Editable = -1)] string newguid) {
+              /*$ var $x$Id = "$newguid$" + x.ToString();
+              x.DoSomething($x$Id); */
+            }
+            </code>
+            </example>
+        </member>
+        <member name="P:JetBrains.Annotations.MacroAttribute.Expression">
+            <summary>
+              Allows specifying a macro that will be executed for a <see cref="T:JetBrains.Annotations.SourceTemplateAttribute">source template</see>
+              parameter when the template is expanded.
+            </summary>
+        </member>
+        <member name="P:JetBrains.Annotations.MacroAttribute.Editable">
+            <summary>
+              Allows specifying which occurrence of the target parameter becomes editable when the template is deployed.
+            </summary>
+            <remarks>
+              If the target parameter is used several times in the template, only one occurrence becomes editable;
+              other occurrences are changed synchronously. To specify the zero-based index of the editable occurrence,
+              use values >= 0. To make the parameter non-editable when the template is expanded, use -1.
+            </remarks>
+            >
+        </member>
+        <member name="P:JetBrains.Annotations.MacroAttribute.Target">
+            <summary>
+              Identifies the target parameter of a <see cref="T:JetBrains.Annotations.SourceTemplateAttribute">source template</see> if the
+              <see cref="T:JetBrains.Annotations.MacroAttribute" /> is applied on a template method.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AspMvcActionAttribute">
+            <summary>
+              ASP.NET MVC attribute. If applied to a parameter, indicates that the parameter
+              is an MVC buildAction. If applied to a method, the MVC buildAction name is calculated
+              implicitly from the sequence. Use this attribute for custom wrappers similar to
+              <c>System.Web.Mvc.Html.ChildActionExtensions.RenderAction(HtmlHelper, String)</c>.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AspMvcAreaAttribute">
+            <summary>
+              ASP.NET MVC attribute. Indicates that a parameter is an MVC area.
+              Use this attribute for custom wrappers similar to
+              <c>System.Web.Mvc.Html.ChildActionExtensions.RenderAction(HtmlHelper, String)</c>.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AspMvcControllerAttribute">
+            <summary>
+              ASP.NET MVC attribute. If applied to a parameter, indicates that the parameter is
+              an MVC controller. If applied to a method, the MVC controller name is calculated
+              implicitly from the sequence. Use this attribute for custom wrappers similar to
+              <c>System.Web.Mvc.Html.ChildActionExtensions.RenderAction(HtmlHelper, String, String)</c>.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AspMvcMasterAttribute">
+            <summary>
+              ASP.NET MVC attribute. Indicates that a parameter is an MVC Master. Use this attribute
+              for custom wrappers similar to <c>System.Web.Mvc.Controller.View(String, String)</c>.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AspMvcModelTypeAttribute">
+            <summary>
+              ASP.NET MVC attribute. Indicates that a parameter is an MVC model type. Use this attribute
+              for custom wrappers similar to <c>System.Web.Mvc.Controller.View(String, Object)</c>.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AspMvcPartialViewAttribute">
+            <summary>
+              ASP.NET MVC attribute. If applied to a parameter, indicates that the parameter is an MVC
+              partial view. If applied to a method, the MVC partial view name is calculated implicitly
+              from the sequence. Use this attribute for custom wrappers similar to
+              <c>System.Web.Mvc.Html.RenderPartialExtensions.RenderPartial(HtmlHelper, String)</c>.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AspMvcSuppressViewErrorAttribute">
+            <summary>
+              ASP.NET MVC attribute. Allows disabling inspections for MVC views within a class or a method.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AspMvcDisplayTemplateAttribute">
+            <summary>
+              ASP.NET MVC attribute. Indicates that a parameter is an MVC display template.
+              Use this attribute for custom wrappers similar to
+              <c>System.Web.Mvc.Html.DisplayExtensions.DisplayForModel(HtmlHelper, String)</c>.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AspMvcEditorTemplateAttribute">
+            <summary>
+              ASP.NET MVC attribute. Indicates that a parameter is an MVC editor template.
+              Use this attribute for custom wrappers similar to
+              <c>System.Web.Mvc.Html.EditorExtensions.EditorForModel(HtmlHelper, String)</c>.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AspMvcTemplateAttribute">
+            <summary>
+              ASP.NET MVC attribute. Indicates that a parameter is an MVC template.
+              Use this attribute for custom wrappers similar to
+              <c>System.ComponentModel.DataAnnotations.UIHintAttribute(System.String)</c>.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AspMvcViewAttribute">
+            <summary>
+              ASP.NET MVC attribute. If applied to a parameter, indicates that the parameter
+              is an MVC view component. If applied to a method, the MVC view name is calculated implicitly
+              from the sequence. Use this attribute for custom wrappers similar to
+              <c>System.Web.Mvc.Controller.View(Object)</c>.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AspMvcViewComponentAttribute">
+            <summary>
+              ASP.NET MVC attribute. If applied to a parameter, indicates that the parameter
+              is an MVC view component name.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AspMvcViewComponentViewAttribute">
+            <summary>
+              ASP.NET MVC attribute. If applied to a parameter, indicates that the parameter
+              is an MVC view component view. If applied to a method, the MVC view component view name is default.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AspMvcActionSelectorAttribute">
+            <summary>
+              ASP.NET MVC attribute. When applied to a parameter of an attribute,
+              indicates that this parameter is an MVC buildAction name.
+            </summary>
+            <example>
+              <code>
+            [ActionName("Foo")]
+            public ActionResult Login(string returnUrl) {
+              ViewBag.ReturnUrl = Url.BuildAction("Foo"); // OK
+              return RedirectToAction("Bar"); // Error: Cannot resolve buildAction
+            }
+            </code>
+            </example>
+        </member>
+        <member name="T:JetBrains.Annotations.RazorSectionAttribute">
+            <summary>
+              Razor attribute. Indicates that a parameter or a method is a Razor section.
+              Use this attribute for custom wrappers similar to
+              <c>System.Web.WebPages.WebPageBase.RenderSection(String)</c>.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.CollectionAccessAttribute">
+            <summary>
+              Indicates how method, constructor invocation or property access
+              over collection type affects content of the collection.
+            </summary>
+        </member>
+        <member name="F:JetBrains.Annotations.CollectionAccessType.None">
+            <summary>Method does not use or modify content of the collection.</summary>
+        </member>
+        <member name="F:JetBrains.Annotations.CollectionAccessType.Read">
+            <summary>Method only reads content of the collection but does not modify it.</summary>
+        </member>
+        <member name="F:JetBrains.Annotations.CollectionAccessType.ModifyExistingContent">
+            <summary>Method can change content of the collection but does not add new elements.</summary>
+        </member>
+        <member name="F:JetBrains.Annotations.CollectionAccessType.UpdatedContent">
+            <summary>Method can add new elements to the collection.</summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AssertionMethodAttribute">
+            <summary>
+              Indicates that the marked method is assertion method, i.e. it halts control flow if
+              one of the conditions is satisfied. To set the condition, mark one of the parameters with
+              <see cref="T:JetBrains.Annotations.AssertionConditionAttribute" /> attribute.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AssertionConditionAttribute">
+            <summary>
+              Indicates the condition parameter of the assertion method. The method itself should be
+              marked by <see cref="T:JetBrains.Annotations.AssertionMethodAttribute" /> attribute. The mandatory argument of
+              the attribute is the assertion type.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.AssertionConditionType">
+            <summary>
+              Specifies assertion type. If the assertion method argument satisfies the condition,
+              then the execution continues. Otherwise, execution is assumed to be halted.
+            </summary>
+        </member>
+        <member name="F:JetBrains.Annotations.AssertionConditionType.IS_TRUE">
+            <summary>Marked parameter should be evaluated to true.</summary>
+        </member>
+        <member name="F:JetBrains.Annotations.AssertionConditionType.IS_FALSE">
+            <summary>Marked parameter should be evaluated to false.</summary>
+        </member>
+        <member name="F:JetBrains.Annotations.AssertionConditionType.IS_NULL">
+            <summary>Marked parameter should be evaluated to null value.</summary>
+        </member>
+        <member name="F:JetBrains.Annotations.AssertionConditionType.IS_NOT_NULL">
+            <summary>Marked parameter should be evaluated to not null value.</summary>
+        </member>
+        <member name="T:JetBrains.Annotations.TerminatesProgramAttribute">
+            <summary>
+              Indicates that the marked method unconditionally terminates control flow execution.
+              For example, it could unconditionally throw exception.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.LinqTunnelAttribute">
+            <summary>
+              Indicates that method is pure LINQ method, with postponed enumeration (like Enumerable.Select,
+              .Where). This annotation allows inference of [InstantHandle] annotation for parameters
+              of delegate type by analyzing LINQ method chains.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.NoEnumerationAttribute">
+            <summary>
+              Indicates that IEnumerable, passed as parameter, is not enumerated.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.RegexPatternAttribute">
+            <summary>
+              Indicates that parameter is regular expression pattern.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.XamlItemsControlAttribute">
+            <summary>
+              XAML attribute. Indicates the type that has <c>ItemsSource</c> property and should be treated
+              as <c>ItemsControl</c>-derived type, to enable inner items <c>DataContext</c> type resolve.
+            </summary>
+        </member>
+        <member name="T:JetBrains.Annotations.XamlItemBindingOfItemsControlAttribute">
+            <summary>
+              XAML attribute. Indicates the property of some <c>BindingBase</c>-derived type, that
+              is used to bind some item of <c>ItemsControl</c>-derived type. This annotation will
+              enable the <c>DataContext</c> type resolve for XAML bindings for such properties.
+            </summary>
+            <remarks>
+              Property should have the tree ancestor of the <c>ItemsControl</c> type or
+              marked with the <see cref="T:JetBrains.Annotations.XamlItemsControlAttribute" /> attribute.
+            </remarks>
+        </member>
+        <member name="T:JetBrains.Annotations.NoReorder">
+            <summary>
+              Prevents the Member Reordering feature from tossing members of the marked class.
+            </summary>
+            <remarks>
+              The attribute must be mentioned in your member reordering patterns
+            </remarks>
+        </member>
+    </members>
+</doc>

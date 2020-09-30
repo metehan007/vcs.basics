@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JetBrains.DPA.Ide.Rider.Activator</name>
+    </assembly>
+    <members>
+        <member name="T:JetBrains.DPA.Ide.RiderActivator.BuildScript.DPAInRiderProduct">
+            <summary>
+            Defines a bundled plugin which drives adding the referenced packages as a plugin for Rider.
+            </summary>
+        </member>
+    </members>
+</doc>

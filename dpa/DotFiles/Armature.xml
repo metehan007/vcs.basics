@@ -1,0 +1,576 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Armature</name>
+    </assembly>
+    <members>
+        <member name="M:Armature.BuilderExtension.UsingToken(Armature.Core.Builder,System.Object)">
+            <summary>
+              Use token for building a unit. See <see cref="T:Armature.Core.UnitInfo" /> for details.
+            </summary>
+        </member>
+        <member name="M:Armature.BuilderExtension.Build``1(Armature.Core.Builder)">
+            <summary>
+              Builds a Unit registered as type <typeparamref name="T" />
+            </summary>
+        </member>
+        <member name="M:Armature.BuilderExtension.Build``1(Armature.Core.Builder,System.Object[])">
+            <summary>
+              Builds a Unit registered as type <typeparamref name="T" /> using additional <paramref name="parameters" /> they can be values or
+              implementation of <see cref="T:Armature.IBuildPlan" />. See <see cref="T:Armature.ForParameter" /> for details.
+            </summary>
+        </member>
+        <member name="M:Armature.BuilderExtension.Build``1(Armature.Core.Builder,System.Object,System.Object[])">
+            <summary>
+              All other Build... methods should delegate to this one. This is the real implementation
+            </summary>
+        </member>
+        <member name="M:Armature.BuilderExtension.Tokenizer.Build``1">
+            <summary>
+              Calls <see cref="M:Armature.BuilderExtension.Build``1(Armature.Core.Builder,System.Object,System.Object[])" /> with <see cref="F:Armature.BuilderExtension.Tokenizer._token" /> as token
+            </summary>
+        </member>
+        <member name="M:Armature.BuilderExtension.Tokenizer.Build``1(System.Object[])">
+            <summary>
+              Calls <see cref="M:Armature.BuilderExtension.Build``1(Armature.Core.Builder,System.Object,System.Object[])" /> with <see cref="F:Armature.BuilderExtension.Tokenizer._token" /> as token
+            </summary>
+        </member>
+        <member name="M:Armature.BuildPlansCollectionExtension.Treat(Armature.Core.BuildPlansCollection,System.Type,System.Object)">
+            <summary>
+              Used to make a build plan for Unit of type <paramref name="type"/>.
+              How it should be treated is specified by subsequence calls using returned object.
+            </summary>
+        </member>
+        <member name="M:Armature.BuildPlansCollectionExtension.Treat``1(Armature.Core.BuildPlansCollection,System.Object)">
+            <summary>
+              Used to make a build plan for Unit of type <typeparamref name="T" />.
+              How <typeparamref name="T" /> should be treated is specified by subsequence calls using returned object.
+            </summary>
+        </member>
+        <member name="M:Armature.BuildPlansCollectionExtension.Treat(Armature.Core.BuildPlansCollection,Armature.Core.UnitInfo)">
+            <summary>
+              Used to make a build plan for <paramref name="unitInfo"/>
+              How it should be treated is specified by subsequence calls using returned object.
+            </summary>
+        </member>
+        <member name="M:Armature.BuildPlansCollectionExtension.TreatInheritorsOf(Armature.Core.BuildPlansCollection,System.Type,System.Object)">
+            <summary>
+              Used to make a build plan for all inheritors of <paramref name="type"/>.
+              How it should be treated is specified by subsequence calls using returned object.
+            </summary>
+        </member>
+        <member name="M:Armature.BuildPlansCollectionExtension.TreatInheritorsOf``1(Armature.Core.BuildPlansCollection,System.Object)">
+            <summary>
+              Used to make a build plan for all inheritors of <typeparamref name="T" />.
+              How <typeparamref name="T" /> should be treated is specified by subsequence calls using returned object.
+            </summary>
+        </member>
+        <member name="M:Armature.BuildPlansCollectionExtension.Override(Armature.Core.BuildPlansCollection,System.Type,System.Object)">
+            <summary>
+              Used to override a build plan for <paramref name="type"/>
+              How it should be treated is specified by subsequence calls using returned object.
+            </summary>
+        </member>
+        <member name="M:Armature.BuildPlansCollectionExtension.Override``1(Armature.Core.BuildPlansCollection,System.Object)">
+            <summary>
+              Used to override a build plan for <typeparamref name="T" />
+              How <typeparamref name="T" /> should be treated is specified by subsequence calls using returned object.
+            </summary>
+        </member>
+        <member name="M:Armature.BuildPlansCollectionExtension.TreatOpenGeneric(Armature.Core.BuildPlansCollection,System.Type,System.Object)">
+            <summary>
+              Used to make a build plan for whole class of open generic types.
+              How <paramref name="openGenericType" /> should be treated is specified by subsequence calls using returned object.
+            </summary>
+        </member>
+        <member name="M:Armature.BuildPlansCollectionExtension.TreatAll(Armature.Core.BuildPlansCollection)">
+            <summary>
+              Used to add some details to build plan of any building unit. E.g. to specify what constructor to use, or register a dependency needed by any type
+              in the system. Usually used as a part of other build plan. See <see cref="M:Armature.BuildPlansCollectionExtension.Building``1(Armature.Core.BuildPlansCollection,System.Object)" /> for details.
+            </summary>
+        </member>
+        <member name="M:Armature.BuildPlansCollectionExtension.Building(Armature.Core.BuildPlansCollection,System.Type,System.Object)">
+            <summary>
+              Used to make a build plan for a unit only if it is building in a context of building <paramref name="type" />.
+            </summary>
+        </member>
+        <member name="M:Armature.BuildPlansCollectionExtension.Building``1(Armature.Core.BuildPlansCollection,System.Object)">
+            <summary>
+              Used to make a build plan for a unit only if it is building in a context of building <typeparamref name="T" />.
+            </summary>
+        </member>
+        <member name="T:Armature.BuildStage">
+            <summary>
+              Represents predefined build stages used by Armature framework. This list can be extended or completely replaced
+              if another framework is implemented on an Armature.Core base
+            </summary>
+            <remarks>Use objects but int or enum in order to avoid memory traffic on boxing</remarks>
+        </member>
+        <member name="F:Armature.BuildStage.Intercept">
+            <summary>
+              Stage of intercepting any unit returned by build process
+            </summary>
+        </member>
+        <member name="F:Armature.BuildStage.Cache">
+            <summary>
+              Stage of building when already built and cached object can be reused
+            </summary>
+        </member>
+        <member name="F:Armature.BuildStage.Aware">
+            <summary>
+              Stage of awareness that some unit was built
+            </summary>
+        </member>
+        <member name="F:Armature.BuildStage.Initialize">
+            <summary>
+              Stage of injecting dependencies into newly created unit
+            </summary>
+        </member>
+        <member name="F:Armature.BuildStage.Create">
+            <summary>
+              Stage of creating an unit, injects dependencies into a constructor, due it must be called to create the unit
+            </summary>
+        </member>
+        <member name="T:Armature.BuildValuePlan">
+            <summary>
+              Stores and applies a plan how to build value to inject.
+            </summary>
+        </member>
+        <member name="M:Armature.BuildValuePlan.Apply(Armature.Core.IUnitSequenceMatcher)">
+            <summary>
+              Can be overriden to add extra logic in addition to implemented in <see cref="M:Armature.IBuildPlan.Apply(Armature.Core.IUnitSequenceMatcher)" />
+            </summary>
+        </member>
+        <member name="M:Armature.CreationTuner.CreatedByDefault">
+            <summary>
+              Specifies that unit of type passed into <see cref="M:Armature.TreatingTuner`1.As(System.Type,System.Object)"/> or <see cref="M:Armature.TreatingTuner`1.As``1(System.Object)"/>
+              should be created using default creation strategy specified in <see cref="F:Armature.Default.CreationBuildAction" />
+            </summary>
+        </member>
+        <member name="M:Armature.CreationTuner.CreatedByReflection">
+            <summary>
+              Specifies that unit of type passed into <see cref="M:Armature.TreatingTuner`1.As(System.Type,System.Object)"/> or <see cref="M:Armature.TreatingTuner`1.As``1(System.Object)"/> should
+              be created using reflection
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Armature.Default.CreationBuildAction">
+            <summary>
+              This is the default build action used by <see cref="M:Armature.CreationTuner.CreatedByDefault" /> and <see cref="M:Armature.TreatingTuner`1.AsCreated``1(System.Object)" />.
+              You can set your own build action which will be used by these tuners.
+            </summary>
+        </member>
+        <member name="M:Armature.Extensibility.ExtensibilityExtension.AsExtensibility``1(``0)">
+            <summary>
+              Usually inheritors of <see cref="T:Armature.Extensibility.IUnitSequenceExtensibility" /> explicitly to not expose service method to the public interface.
+              This method simplifies casting of inheritors of <see cref="T:Armature.Extensibility.IUnitSequenceExtensibility" /> to this interface.
+            </summary>
+            <param name="ext"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Armature.Extensibility.IUnitSequenceExtensibility">
+            <summary>
+              This interface is used to hide <see cref="P:Armature.Extensibility.IUnitSequenceExtensibility.UnitSequenceMatcher" /> property from the intellisense list (inheritor should implement it explicitly)
+              but provides an access to the <see cref="T:Armature.Core.IUnitSequenceMatcher" /> for extensibility. See usages in Tests.Extensibility project.
+            </summary>
+        </member>
+        <member name="T:Armature.IBuildPlan">
+            <summary>
+              Used for simplifying framework syntax, in order to be able create an object which doesn't have an access to the currently being tuned build plan and
+              apply the plan later.
+              See usages for details.
+            </summary>
+        </member>
+        <member name="M:Armature.IBuildPlan.Apply(Armature.Core.IUnitSequenceMatcher)">
+            <summary>
+              Apply build plan to the currently building plan
+            </summary>
+            <param name="unitSequenceMatcher"></param>
+        </member>
+        <member name="T:Armature.InjectPointMatchingWeight">
+            <summary>
+              Matching weight for different parameter matchers
+            </summary>
+            <remarks>
+              In order to change default priority of matchers inherit this class and change values in static constructor.
+              !!! Instantiate inherited class to ensure that static ctor is called !!!
+            </remarks>
+        </member>
+        <member name="P:Armature.InjectPointMatchingWeight.WeakTypedParameter">
+            <summary>
+              Weight of matcher matching value for parameter by assignability value to parameter.
+            </summary>
+        </member>
+        <member name="P:Armature.InjectPointMatchingWeight.TypedParameter">
+            <summary>
+              Weight of matcher matching value for parameter by strict type equality.
+            </summary>
+        </member>
+        <member name="P:Armature.InjectPointMatchingWeight.AttributedParameter">
+            <summary>
+              Weight of matcher matching parameter by attribute.
+            </summary>
+        </member>
+        <member name="P:Armature.InjectPointMatchingWeight.NamedParameter">
+            <summary>
+              Weight of matcher matching parameter by name
+            </summary>
+        </member>
+        <member name="T:Armature.Match">
+            <summary>
+              Utility class to simplify the reading of the code creates different <see cref="T:Armature.Core.IUnitMatcher" />s.
+            </summary>
+        </member>
+        <member name="M:Armature.Match.Type``1(System.Object)">
+            <summary>
+              Creates a type matcher with <see cref="T:Armature.Core.UnitInfo" />(typeof(<typeparamref name="T" />), <paramref name="token" />)
+            </summary>
+        </member>
+        <member name="M:Armature.Match.Type(System.Type,System.Object)">
+            <summary>
+              Creates a type matcher with <see cref="T:Armature.Core.UnitInfo" />(<paramref name="type" />, <paramref name="token" />)
+            </summary>
+        </member>
+        <member name="M:Armature.Match.OpenGenericType(System.Type,System.Object)">
+            <summary>
+              Creates a open generic type matcher with <see cref="T:Armature.Core.UnitInfo" />(<paramref name="type" />, <paramref name="token" />)
+            </summary>
+        </member>
+        <member name="M:Armature.ForParameter.OfType``1">
+            <summary>
+              Matches with parameter with <see cref="P:System.Reflection.ParameterInfo.ParameterType" /> equals to <typeparamref name="T" />
+            </summary>
+        </member>
+        <member name="M:Armature.ForParameter.Named(System.String)">
+            <summary>
+              Matches with parameter with <see cref="P:System.Reflection.ParameterInfo.Name" /> equals to <paramref name="parameterName" />
+            </summary>
+            <param name="parameterName">Matches parameter with this name</param>
+            <returns></returns>
+        </member>
+        <member name="M:Armature.ForParameter.WithInjectPoint(System.Object)">
+            <summary>
+              Matches with parameter marked with <see cref="T:Armature.InjectAttribute" />(<paramref name="injectPointId" />)
+            </summary>
+            <param name="injectPointId">
+              Matches parameter marked with <see cref="T:Armature.InjectAttribute" /> with <see cref="F:Armature.InjectAttribute.InjectionPointId" />
+              equals to <paramref name="injectPointId" />
+            </param>
+        </member>
+        <member name="T:Armature.IParameterValueBuildPlan">
+            <inheritdoc cref="T:Armature.IBuildPlan" />
+            <summary>
+              Contains plan of building value to inject into a parameter
+            </summary>
+        </member>
+        <member name="M:Armature.ParameterValueTuner.UseValue(System.Object)">
+            <summary>
+              Use the <paramref name="value" /> for the parameter
+            </summary>
+        </member>
+        <member name="M:Armature.ParameterValueTuner.UseToken(System.Object)">
+            <summary>
+              For building a value for the parameter use <see cref="P:System.Reflection.ParameterInfo.ParameterType" /> and <paramref name="token" />
+            </summary>
+        </member>
+        <member name="M:Armature.ParameterValueTuner.UseInjectPointIdAsToken">
+            <summary>
+              For building a value for the parameter use the type of parameter and <see cref="F:Armature.InjectAttribute.InjectionPointId" /> as token
+            </summary>
+        </member>
+        <member name="M:Armature.ParameterValueTuner.UseFactoryMethod(System.Func{System.Object})">
+            <summary>
+              For building a value for the parameter use <paramref name="factoryMethod" /> factory method
+            </summary>
+        </member>
+        <member name="M:Armature.ParameterValueTuner.UseFactoryMethod``1(System.Func{``0,System.Object})">
+            <summary>
+              For building a value for the parameter use <paramref name="factoryMethod" /> factory method
+            </summary>
+        </member>
+        <member name="M:Armature.ParameterValueTuner.UseFactoryMethod``2(System.Func{``0,``1,System.Object})">
+            <summary>
+              For building a value for the parameter use <paramref name="factoryMethod" /> factory method
+            </summary>
+        </member>
+        <member name="M:Armature.ParameterValueTuner.UseFactoryMethod``3(System.Func{``0,``1,``2,System.Object})">
+            <summary>
+              For building a value for the parameter use <paramref name="factoryMethod" /> factory method
+            </summary>
+        </member>
+        <member name="M:Armature.ParameterValueTuner.UseFactoryMethod``4(System.Func{``0,``1,``2,``3,System.Object})">
+            <summary>
+              For building a value for the parameter use <paramref name="factoryMethod" /> factory method
+            </summary>
+        </member>
+        <member name="M:Armature.ParameterValueTuner.UseFactoryMethod``5(System.Func{``0,``1,``2,``3,``4,System.Object})">
+            <summary>
+              For building a value for the parameter use <paramref name="factoryMethod" /> factory method
+            </summary>
+        </member>
+        <member name="M:Armature.ParameterValueTuner.UseFactoryMethod``6(System.Func{``0,``1,``2,``3,``4,``5,System.Object})">
+            <summary>
+              For building a value for the parameter use <paramref name="factoryMethod" /> factory method
+            </summary>
+        </member>
+        <member name="M:Armature.ParameterValueTuner.UseFactoryMethod``7(System.Func{``0,``1,``2,``3,``4,``5,``6,System.Object})">
+            <summary>
+              For building a value for the parameter use <paramref name="factoryMethod" /> factory method
+            </summary>
+        </member>
+        <member name="M:Armature.ParameterValueTuner.UseFactoryMethod(System.Func{Armature.Core.IBuildSession,System.Object})">
+            <summary>
+              For building a value for the parameter use <paramref name="factoryMethod" /> factory method
+            </summary>
+        </member>
+        <member name="T:Armature.ParameterValueTuner`1">
+            <summary>
+              This generic type is used for further extensibility possibilities which involves generic types. Generic type can't be constructed from typeof
+            </summary>
+            <typeparam name="T">The type of parameter</typeparam>
+        </member>
+        <member name="M:Armature.ParameterValueTuner`1.UseValue(`0)">
+            <summary>
+              Use the <paramref name="value" /> for the parameter
+            </summary>
+        </member>
+        <member name="M:Armature.ForProperty.OfType``1">
+            <summary>
+              Matches with property with <see cref="P:System.Reflection.PropertyInfo.PropertyType" /> equals to <typeparamref name="T" />
+            </summary>
+        </member>
+        <member name="M:Armature.ForProperty.Named(System.String)">
+            <summary>
+              Matches with property with <see cref="P:System.Reflection.MemberInfo.Name" /> equals to <paramref name="propertyName" />
+            </summary>
+        </member>
+        <member name="M:Armature.ForProperty.WithInjectPoint(System.Object)">
+            <summary>
+              Matches with property marked with <see cref="T:Armature.InjectAttribute" />(<paramref name="injectPointId" />)
+            </summary>
+        </member>
+        <member name="T:Armature.InjectPropertyByInjectPointIdBuildPlan">
+            <summary>
+              Adds a plan injecting dependencies into properties marked with <see cref="T:Armature.InjectAttribute" /> with corresponding point ids
+            </summary>
+        </member>
+        <member name="T:Armature.InjectPropertyByNameBuildPlan">
+            <summary>
+              Adds a plan injecting dependencies into properties with corresponding names
+            </summary>
+        </member>
+        <member name="T:Armature.IPropertyValueBuildPlan">
+            <inheritdoc cref="T:Armature.IBuildPlan" />
+            <summary>
+              Contains plan of building value to inject into a property
+            </summary>
+        </member>
+        <member name="M:Armature.Property.Named(System.String[])">
+            <summary>
+              Adds a plan injecting dependencies into properties with corresponding <paramref name="names" />
+            </summary>
+        </member>
+        <member name="M:Armature.Property.ByInjectPoint(System.Object[])">
+            <summary>
+              Adds a plan injecting dependencies into properties marked with <see cref="T:Armature.InjectAttribute" /> with corresponding <paramref name="injectPointId" />
+            </summary>
+        </member>
+        <member name="M:Armature.PropertyValueBuildPlan.Apply(Armature.Core.IUnitSequenceMatcher)">
+            <summary>
+              In addition to the base logic adds a logic which provides a properties to inject into
+            </summary>
+            <param name="unitSequenceMatcher"></param>
+        </member>
+        <member name="M:Armature.PropertyValueTuner.UseValue(System.Object)">
+            <summary>
+              Inject the <paramref name="value" /> into the property
+            </summary>
+        </member>
+        <member name="M:Armature.PropertyValueTuner.UseToken(System.Object)">
+            <summary>
+              For building a value for the property use <see cref="P:System.Reflection.PropertyInfo.PropertyType" /> and <paramref name="token" />
+            </summary>
+        </member>
+        <member name="M:Armature.PropertyValueTuner.UseFactoryMethod(System.Func{Armature.Core.IBuildSession,System.Object})">
+            <summary>
+              For building a value for the property use factory method />
+            </summary>
+        </member>
+        <member name="M:Armature.PropertyValueTuner.UseInjectPointIdAsToken">
+            <summary>
+              For building a value for the property use <see cref="P:System.Reflection.PropertyInfo.PropertyType" /> and <see cref="F:Armature.InjectAttribute.InjectionPointId" /> as a token
+            </summary>
+        </member>
+        <member name="M:Armature.SequenceTuner.Building(System.Type,System.Object)">
+            <summary>
+              Used to make a build plan for a unit only if it is building in a context of building <paramref name="type" /> with token <paramref name="token" />
+            </summary>
+        </member>
+        <member name="M:Armature.SequenceTuner.Building``1(System.Object)">
+            <summary>
+              Used to make a build plan for a unit only if it is building in a context of building <typeparamref name="T" /> with token <paramref name="token" />
+            </summary>
+        </member>
+        <member name="M:Armature.SequenceTuner.Treat(System.Type,System.Object)">
+            <summary>
+              Used to make a build plan for Unit of type <paramref name="type"/>.
+              How it should be treated is specified by subsequence calls using returned object.
+            </summary>
+        </member>
+        <member name="M:Armature.SequenceTuner.Treat``1(System.Object)">
+            <summary>
+              Used to make a build plan for <typeparamref name="T" />.
+              How <typeparamref name="T" /> should be treated is specified by subsequence calls using returned object
+            </summary>
+        </member>
+        <member name="M:Armature.SequenceTuner.TreatAll">
+            <summary>
+              Used to add some details to build plan of any building unit in context of currently building one
+            </summary>
+        </member>
+        <member name="M:Armature.TreatingOpenGenericTuner.AsCreated(System.Type,System.Object)">
+            <summary>
+              When generic type belonging to class described by open generic type passed to <see cref="M:Armature.BuildPlansCollectionExtension.TreatOpenGeneric(Armature.Core.BuildPlansCollection,System.Type,System.Object)"/>
+              is requested to inject, object of generic type <paramref name="openGenericType"/> created by default creation strategy is created and injected.
+              See <see cref="F:Armature.Default.CreationBuildAction"/> for details.
+            </summary>
+        </member>
+        <member name="M:Armature.TreatingOpenGenericTuner.As(System.Type,System.Object)">
+            <summary>
+              When generic type belonging to class described by open generic type passed to <see cref="M:Armature.BuildPlansCollectionExtension.TreatOpenGeneric(Armature.Core.BuildPlansCollection,System.Type,System.Object)"/>
+              is requested to inject, object of generic type <paramref name="openGenericType"/> injected. Tune how it is created by subsequence tuner calls. 
+            </summary>
+        </member>
+        <member name="M:Armature.TreatingTuner`1.AsIs">
+            <summary>
+              For all who depends on unit of type passed into <see cref="M:Armature.BuildPlansCollectionExtension.Treat(Armature.Core.BuildPlansCollection,System.Type,System.Object)"/> inject object of this type
+              created by default strategy.
+              See <see cref="F:Armature.Default.CreationBuildAction"/> for details.
+              Tune plan of building it by subsequence calls.
+            </summary>
+        </member>
+        <member name="M:Armature.TreatingTuner`1.AsInstance(`0)">
+            <summary>
+              For all who depends on <typeparamref name="T" /> inject <paramref name="instance" />.
+            </summary>
+        </member>
+        <member name="M:Armature.TreatingTuner`1.As(System.Type,System.Object)">
+            <summary>
+              For all who depends on unit of type passed into <see cref="M:Armature.BuildPlansCollectionExtension.Treat(Armature.Core.BuildPlansCollection,System.Type,System.Object)"/> inject object of type <paramref name="type"/>.
+              Tune plan of creating the object by subsequence calls.
+            </summary>
+        </member>
+        <member name="M:Armature.TreatingTuner`1.As``1(System.Object)">
+            <summary>
+              For all who depends on unit of type <typeparamref name="T" /> inject object of type <typeparamref name="TRedirect" />.
+              Tune plan of creating the object by subsequence calls.
+            </summary>
+        </member>
+        <member name="M:Armature.TreatingTuner`1.AsCreated(System.Type,System.Object)">
+            <summary>
+              For all who depends on unit of type passed into <see cref="M:Armature.BuildPlansCollectionExtension.Treat(Armature.Core.BuildPlansCollection,System.Type,System.Object)"/> inject object of type
+              <paramref name="type"/> created by default strategy.
+              See <see cref="F:Armature.Default.CreationBuildAction"/> for details.
+              Tune plan of building it by subsequence calls.
+            </summary>
+        </member>
+        <member name="M:Armature.TreatingTuner`1.AsCreated``1(System.Object)">
+            <summary>
+              For all who depends on unit of type passed into <see cref="M:Armature.BuildPlansCollectionExtension.Treat(Armature.Core.BuildPlansCollection,System.Type,System.Object)"/> inject object of type
+              <typeparamref name="TRedirect" /> created by default strategy.
+              See <see cref="F:Armature.Default.CreationBuildAction"/> for details.
+              Tune plan of building it by subsequence calls.
+            </summary>
+        </member>
+        <member name="M:Armature.TreatingTuner`1.AsCreatedWith(System.Func{`0})">
+            <summary>
+              For all who depends on <typeparamref name="T" /> inject object created by specified factory method.
+            </summary>
+        </member>
+        <member name="M:Armature.TreatingTuner`1.AsCreatedWith``1(System.Func{``0,`0})">
+            <inheritdoc cref="M:Armature.TreatingTuner`1.AsCreatedWith(System.Func{`0})" />
+        </member>
+        <member name="M:Armature.TreatingTuner`1.AsCreatedWith``2(System.Func{``0,``1,`0})">
+            <inheritdoc cref="M:Armature.TreatingTuner`1.AsCreatedWith(System.Func{`0})" />
+        </member>
+        <member name="M:Armature.TreatingTuner`1.AsCreatedWith``3(System.Func{``0,``1,``2,`0})">
+            <inheritdoc cref="M:Armature.TreatingTuner`1.AsCreatedWith(System.Func{`0})" />
+        </member>
+        <member name="M:Armature.TreatingTuner`1.AsCreatedWith``4(System.Func{``0,``1,``2,``3,`0})">
+            <inheritdoc cref="M:Armature.TreatingTuner`1.AsCreatedWith(System.Func{`0})" />
+        </member>
+        <member name="M:Armature.TreatingTuner`1.AsCreatedWith``5(System.Func{``0,``1,``2,``3,``4,`0})">
+            <inheritdoc cref="M:Armature.TreatingTuner`1.AsCreatedWith(System.Func{`0})" />
+        </member>
+        <member name="M:Armature.TreatingTuner`1.AsCreatedWith``6(System.Func{``0,``1,``2,``3,``4,``5,`0})">
+            <inheritdoc cref="M:Armature.TreatingTuner`1.AsCreatedWith(System.Func{`0})" />
+        </member>
+        <member name="M:Armature.TreatingTuner`1.AsCreatedWith``7(System.Func{``0,``1,``2,``3,``4,``5,``6,`0})">
+            <inheritdoc cref="M:Armature.TreatingTuner`1.AsCreatedWith(System.Func{`0})" />
+        </member>
+        <member name="M:Armature.TreatingTuner`1.AsCreatedWith(System.Func{Armature.Core.IBuildSession,`0})">
+            <inheritdoc cref="M:Armature.TreatingTuner`1.AsCreatedWith(System.Func{`0})" />
+        </member>
+        <member name="M:Armature.Tuner.UsingParameters(System.Object[])">
+            <summary>
+              Provided values will be used to inject the into created object. See <see cref="T:Armature.ForParameter" /> for details
+            </summary>
+        </member>
+        <member name="M:Armature.Tuner.InjectProperty(System.Object[])">
+            <summary>
+              Provided values will be injected into properties of the created object.  See <see cref="T:Armature.ForProperty" /> for details.
+              Also value can be a build plan returned by one of the method of the <see cref="T:Armature.Property" /> class, which specifies properties to inject dependencies.
+            </summary>
+        </member>
+        <member name="M:Armature.Tuner.AsSingleton">
+            <summary>
+              Register Unit as an eternal singleton <see cref="T:Armature.Core.BuildActions.SingletonBuildAction" /> for details
+            </summary>
+        </member>
+        <member name="M:Armature.Tuner.UsingLongestConstructor">
+            <summary>
+              Instantiate an Unit using a constructor with the biggest number of parameters
+            </summary>
+        </member>
+        <member name="M:Armature.Tuner.UsingInjectPointConstructor(System.Object)">
+            <summary>
+              Instantiate an Unit using a constructor marked with <see cref="T:Armature.InjectAttribute" />(<paramref name="injectionPointId" />)
+            </summary>
+        </member>
+        <member name="M:Armature.Tuner.UsingParameterlessConstructor">
+            <summary>
+              Instantiate an Unit using constructor without parameters
+            </summary>
+        </member>
+        <member name="M:Armature.Tuner.UsingConstructorWithParameters``1">
+            <summary>
+              Instantiate an Unit using constructor with exact set of parameters provided as generic arguments
+            </summary>
+        </member>
+        <member name="M:Armature.Tuner.UsingConstructorWithParameters``2">
+            <summary>
+              Instantiate an Unit using constructor with exact set of parameters provided as generic arguments
+            </summary>
+        </member>
+        <member name="M:Armature.Tuner.UsingConstructorWithParameters``3">
+            <summary>
+              Instantiate an Unit using constructor with exact set of parameters provided as generic arguments
+            </summary>
+        </member>
+        <member name="M:Armature.Tuner.UsingConstructorWithParameters``4">
+            <summary>
+              Instantiate an Unit using constructor with exact set of parameters provided as generic arguments
+            </summary>
+        </member>
+        <member name="M:Armature.Tuner.UsingConstructorWithParameters(System.Type[])">
+            <summary>
+              Instantiate an Unit using constructor with exact set of parameters as provided in <paramref name="parameterTypes" />
+            </summary>
+        </member>
+        <member name="M:Armature.Tuner.BuildingWhich(System.Action{Armature.SequenceTuner})">
+            <summary>
+              Doing the same as <see cref="M:Armature.BuildPlansCollectionExtension.Building``1(Armature.Core.BuildPlansCollection,System.Object)" /> but w/o breaking fluent syntax
+            </summary>
+        </member>
+    </members>
+</doc>
